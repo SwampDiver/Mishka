@@ -1,0 +1,34 @@
+.banner-nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+}
+
+.banner-nav__item {
+  padding: 0;
+}
+
+.banner-nav__link {
+  display: block;
+}
+
+.banner-nav__link--interior {
+  background-color: $aqua-light;
+}
+
+.banner-nav__link--toys {
+  background-color: $aqua-dark;
+}
+
+.banner-nav__text {
+  display: block;
+
+  padding: 30px;
+  max-width: 130px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+}

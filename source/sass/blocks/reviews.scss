@@ -1,0 +1,47 @@
+.reviews__item {
+  margin: 0 0 30px 0;
+}
+
+.reviews__text {
+  color: $grey-dark;
+}
+
+.reviews__author {
+  color: $grey-dark;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 30px;
+
+}
+
+.reviews__name {
+  color: $black;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.reviews__navigation {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 30px;
+  max-width: 320px;
+}
+
+.reviews__button {
+  box-sizing: border-box;
+  width: 50%;
+
+
+  padding: 15px 10px;
+
+  text-align: center;
+  border: 1px solid $grey-light;
+
+  background-color: transparent;
+}
+.reviews__button--forward {
+  border-left: none;
+}
+
