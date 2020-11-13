@@ -1,0 +1,41 @@
+.contacts__contacts-wrapper {
+
+  padding: 0;
+}
+
+.contacts__info {
+  margin: 25px auto 0;
+  min-width: 260px;
+  max-width: 300px;
+
+  color: $grey-dark;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+
+.contacts__type {
+  padding: 0 20px 20px 0;
+  vertical-align: top;
+}
+
+.contacts__adress {
+
+  padding: 0;
+  vertical-align: top;
+}
+
+.contacts__email {
+  padding-bottom: 4px;
+  border-bottom: 1px solid $aqua-form;
+
+  &:hover {
+    color: $aqua-dark--hover;    
+    border-color: $aqua-dark--hover;
+  }
+
+  &:active {
+    color: rgba($aqua-dark--hover, 0.3);   
+    border-color: rgba($aqua-dark--hover, 0.3);
+  }
+}

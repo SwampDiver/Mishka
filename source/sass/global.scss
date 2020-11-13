@@ -12,17 +12,23 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 13px;
+  line-height: 24px;
   font-family: "Opensans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   overflow-x: hidden;
-  }
+}
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul {
+
+  padding: 0;
+  list-style: none;
 }
 
 .visually-hidden:not(:focus):not(:active),

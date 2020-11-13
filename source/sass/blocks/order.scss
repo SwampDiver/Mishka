@@ -1,0 +1,169 @@
+.order {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.order__description {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $grey-dark;
+}
+
+.order__fieldset {
+
+  position: relative;
+  padding: 20px 0;
+  border: 0;
+}
+
+.order__legend {
+  display: block;
+
+  width: 100%;
+  line-height: 16px;
+  color: $aqua-light;
+  text-transform: uppercase;
+}
+
+.order__legend-text {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    margin-left: 25px;
+    height: 1px;
+    background-color: $aqua-light;
+  }
+}
+
+.order__content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.order__lable {
+  position: relative;
+  display: block;
+
+  padding: 25px 25px 25px 60px;
+  min-width: 260px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    width: 40px;
+    height: 40px;
+    border: 2px solid $grey-dark;
+  }
+
+  &:hover::before {
+    border-color: $aqua-form;
+  }
+
+  &:active::before {
+    border-color: rgba($grey-dark, 0.3);
+  }
+}
+
+
+.order__lable--radio {
+  &::before {
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 12px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 16px;
+    background-color: $aqua-form;
+    border-radius: 50%;
+  }
+}
+
+.order__lable--checkbox {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 12px;
+    top: 26px;
+
+    width: 23px;
+    height: 18px;
+
+    background-color: tomato;
+    // background-image: url(../../img/tick-mobile.svg);
+
+  }
+}
+
+
+.order__lable--text {
+  padding: 0 10px 0 0;
+
+  &::before {
+    display: none;
+  }
+}
+
+.order__text {
+  display: block;
+
+
+  padding: 15px 0;
+  width: 100%;
+
+  border: none;
+  border-bottom: 2px solid $black;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::placeholder {
+    color: $grey-dark;
+    opacity: 0.3;
+  }
+}
+
+.order__message {
+  display: block;
+
+  padding: 15px;
+  width: 100%;
+  min-height: 143px;
+  border: 2px solid $black;
+  resize: vertical;
+
+  &::placeholder {
+    color: $grey-dark;
+    opacity: 0.3;
+  }
+}
+
+.order__notification {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+
+  color: $grey-dark;
+}

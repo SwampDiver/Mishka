@@ -1,0 +1,43 @@
+.main-nav {
+  margin: 0 auto;
+}
+
+
+.main-nav__logo-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav__link-logo {
+  display: block;
+  width: 90px;
+  margin-top: 17px;
+}
+
+.main-nav__toggle {
+  position: absolute;
+
+  right: 10%;
+  top: 35%;
+
+  width: 21px;
+  height: 21px;
+}
+
+// .main-nav__site-list {
+//   display: none;
+// }
+
+// .main-nav__user-list {
+//   display: none;
+// }
+
+// .main-nav__stock-list {
+//   display: none;
+// }
+
+// .main-nav__text {
+//   display: none;
+// }

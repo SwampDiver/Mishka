@@ -1,0 +1,41 @@
+.catalog-item__image {
+  display: block;
+}
+
+
+.catalog-item__wrapper {
+  padding: 0 27px 30px;
+  border: 1px solid $grey-light;
+}
+
+.catalog-item__title {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.catalog-item__size {
+  color: $grey-dark;
+  font-size: 13px;
+
+}
+
+.catalog-item__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 20px;
+
+  border-top: 1px solid $grey-light;
+}
+
+.catalog-item__price {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.catalog-item__button {
+  width: 25px;
+  height: 25px;
+
+  background-color: #8d4c4c;
+}

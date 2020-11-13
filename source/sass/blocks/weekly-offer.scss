@@ -1,0 +1,62 @@
+.weekly-offer__titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.weekly-offer__title {
+  order: 1;
+  margin: 0 0 30px 0;
+
+  color: $aqua-light;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.weekly-offer__subtitle {
+  margin: 30px 0 10px;
+
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.weekly-offer__description {
+  margin: 0 0 20px;
+  color: $grey-dark;
+
+  font-size: 15px;
+}
+.weekly-offer__options {
+  color: $grey-dark;
+
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.weekly-offer__cell {
+  padding: 10px 10px 8px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.weekly-offer__image {
+  display: block;
+}
+
+.weekly-offer__price {
+  display: block;
+
+  margin: 25px auto;
+
+  text-align: center;
+
+  color: $grey-dark;
+
+  font-size: 17px;
+}
+
+.weekly-offer__order {
+  margin-bottom: 70px;
+
+}
+
+
