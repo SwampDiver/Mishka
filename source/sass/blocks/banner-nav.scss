@@ -1,9 +1,6 @@
 .banner-nav {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
-
 }
 
 .banner-nav__item {
@@ -22,13 +19,33 @@
   background-color: $aqua-dark;
 }
 
-.banner-nav__text {
-  display: block;
-
+.banner-nav__link {
   padding: 30px;
-  max-width: 130px;
+}
 
-  color: #ffffff;
+.banner-nav__text {
+display: block;
+max-width: 130px;
 
+  color: $white;
   font-size: 19px;
+  font-weight: bold;
+}
+
+@media (min-width: $tablet) {
+  .banner-nav {
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+
+  .banner-nav__item {
+    width: 50%;
+  }
+
+  .banner-nav__link {
+    padding: 34px 150px 34px 34px;
+  }
+
 }

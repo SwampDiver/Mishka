@@ -1,6 +1,12 @@
 .page-footer {
+  padding-top: 20px;
   background-color: $gray-background;
 }
+
+.page-footer__logo {
+  display: none;
+}
+
 .page-footer__social {
   padding: 0 0 10px 0;
   border-bottom: 1px solid #e5e5e5;
@@ -14,3 +20,18 @@
   line-height: 18px;
 }
 
+
+@media (min-width: $tablet) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 50px;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+
+}

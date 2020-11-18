@@ -4,3 +4,9 @@
   font-weight: 700;
 }
 
+@media (min-width: $tablet) {
+  .section-title {
+  font-size: 43px;
+  line-height: 50px;
+  }
+}

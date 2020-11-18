@@ -4,9 +4,11 @@
 }
 
 .contacts__info {
-  margin: 25px auto 0;
-  min-width: 260px;
-  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+
+  max-width: 320px;
+
 
   color: $grey-dark;
   font-size: 15px;
@@ -15,14 +17,21 @@
 
 
 .contacts__type {
-  padding: 0 20px 20px 0;
+  display: inline-block;
   vertical-align: top;
+  margin-bottom: 35px;
+  padding: 0;
+  width: 48px;
+
 }
 
 .contacts__adress {
-
-  padding: 0;
+  display: inline-block;
   vertical-align: top;
+  margin-left: 35px;
+  padding: 0;
+  width: 182px;
+
 }
 
 .contacts__email {
@@ -30,12 +39,38 @@
   border-bottom: 1px solid $aqua-form;
 
   &:hover {
-    color: $aqua-dark--hover;    
+    color: $aqua-dark--hover;
     border-color: $aqua-dark--hover;
   }
 
   &:active {
-    color: rgba($aqua-dark--hover, 0.3);   
+    color: rgba($aqua-dark--hover, 0.3);
     border-color: rgba($aqua-dark--hover, 0.3);
   }
 }
+
+.contacts__write-us {
+  margin: 40px auto;
+}
+
+@media (min-width: $tablet) {
+  .contacts__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 668px;
+  }
+
+  .contacts__type {
+    width: 60px;
+  }
+  .contacts__adress {
+    margin: 0;
+    width: 260px;
+  }
+
+  .contacts__write-us {
+    margin: 50px auto;
+  }
+
+}
+

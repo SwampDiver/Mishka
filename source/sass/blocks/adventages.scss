@@ -3,14 +3,55 @@
 }
 
 .adventages__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
+
+
 }
 
 .adventages__item {
   padding: 90px 0 30px 0;
+
+  width: 260px;
 
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
 }
 
+
+@media (min-width: $tablet) {
+
+  .adventages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .adventages__item {
+    min-width: 334px;
+
+
+    &--style {
+      order: 2;
+    }
+
+    &--likes {
+      order: 4;
+    }
+
+    &--hendmade {
+      order: 1;
+    }
+
+    &--support {
+      order: 3;
+    }
+    &--packaging {
+      order: 5;
+    }
+  }
+
+}
