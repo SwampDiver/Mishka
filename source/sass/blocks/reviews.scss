@@ -41,7 +41,44 @@
 
   background-color: transparent;
 }
+
 .reviews__button--forward {
   border-left: none;
 }
 
+
+@media (min-width: $tablet) {
+  .reviews__wrapper {
+    position: relative;
+
+  }
+
+  .reviews__text {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .reviews__name {
+    font-size: 18px;
+  }
+
+  .reviews__navigation {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+
+    min-width: 167px;
+
+    border: none;
+  }
+
+
+  .reviews__feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 175px;
+  }
+
+}

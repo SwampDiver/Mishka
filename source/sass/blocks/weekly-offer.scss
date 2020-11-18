@@ -13,20 +13,23 @@
   line-height: 20px;
   text-transform: uppercase;
 }
+
 .weekly-offer__subtitle {
   margin: 30px 0 10px;
-
-  font-size: 25px;
-  line-height: 30px;
 }
 
 .weekly-offer__description {
+
+
   margin: 0 0 20px;
   color: $grey-dark;
 
   font-size: 15px;
 }
+
 .weekly-offer__options {
+  width: 100%;
+
   color: $grey-dark;
 
   font-size: 15px;
@@ -38,12 +41,21 @@
   border-bottom: 1px solid #ececec;
 }
 
+.weekly-offer__image-wrapper {
+  margin: 0 auto;
+  width: 260px;
+  height: 315px;
+}
+
 .weekly-offer__image {
   display: block;
+  width: 260px;
+  height: auto;
+  background-color: #000;
 }
 
 .weekly-offer__price {
-  display: block;
+
 
   margin: 25px auto;
 
@@ -52,11 +64,63 @@
   color: $grey-dark;
 
   font-size: 17px;
+  font-weight: 700;
 }
 
 .weekly-offer__order {
   margin-bottom: 70px;
-
 }
 
 
+@media (min-width: $tablet) {
+  .weekly-offer__titles {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .weekly-offer__title {
+    margin: 50px 0;
+    max-width: 127px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .weekly-offer__subtitle {
+    margin: 40px 0;
+  }
+
+  .weekly-offer__wrapper {
+    position: relative;
+    padding-right: 380px;
+  }
+
+  .weekly-offer__description {
+    margin-bottom: 50px;
+  }
+
+  .weekly-offer__options {
+    padding-bottom: 25px;
+  }
+
+  .weekly-offer__image-wrapper {
+    position: absolute;
+
+    top: 5px;
+    right: 0;
+
+    width: 333px;
+    height: 405px;
+
+    background-color: tomato;
+  }
+
+  .weekly-offer__image {
+    width: 333px;
+  }
+
+  .weekly-offer__price {
+    margin-bottom: 35px;
+  }
+
+
+}

@@ -1,0 +1,23 @@
+.site-nav__link {
+  display: block;
+  padding: 30px 30px 30px 75px;
+  border-bottom: 1px solid $grey-light;
+
+  &:first-child {
+    border-top: 1px solid $grey-light;
+  }
+}
+
+@media (min-width: $tablet) {
+  .site-nav__link {
+    padding: 20px 32px 20px 0px;
+    border: none;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+
+
+}

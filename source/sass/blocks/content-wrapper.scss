@@ -3,3 +3,8 @@
   padding: 0 30px;
 }
 
+@media (min-width: $tablet) {
+  .content-wrapper {
+    padding: 0 50px;
+  }
+}

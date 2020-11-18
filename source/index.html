@@ -31,10 +31,10 @@
 
       <ul class="main-nav__user-list user-nav">
         <li class="user-nav__item">
-          <a class="user-nav__link user-nav__link--search" href="catalog.html">Поиск по сайту</a>
+          <a class="user-nav__link user-nav__link--search" href="#">Поиск по сайту</a>
         </li>
         <li class="user-nav__item">
-          <a class="user-nav__link user-nav__link--cart" href="form.html">Корзина: пока пуста</a>
+          <a class="user-nav__link user-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
 
@@ -74,42 +74,50 @@
     </section>
 
     <section class="weekly-offer content-wrapper">
-      <div class="weekly-offer__titles">
+      <header class="weekly-offer__titles">
         <h2 class="weekly-offer__title">Товар недели</h2>
         <h3 class="weekly-offer__subtitle section-title">Вязаные корзинки</h3>
+      </header>
+
+      <div class="weekly-offer__wrapper">
+        <p class="weekly-offer__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и
+          трех размерах.</p>
+        <table class="weekly-offer__options">
+          <tr class="weekly-offer__row">
+            <td class="weekly-offer__cell">
+              Цвет:
+            </td>
+            <td class="weekly-offer__cell">
+              «Тиффани»/серый
+            </td>
+          </tr>
+          <tr class="weekly-offer__row">
+            <td class="weekly-offer__cell">
+              Диаметр:
+            </td>
+            <td class="weekly-offer__cell">
+              25 см
+            </td>
+          </tr>
+          <tr class="weekly-offer__row">
+            <td class="weekly-offer__cell">
+              Высота:
+            </td>
+            <td class="weekly-offer__cell">
+              15 см
+            </td>
+          </tr>
+        </table>
+
+        <div class="weekly-offer__image-wrapper">
+          <img class="weekly-offer__image" src="#" width="260" height="315" alt="Товар недели - вязаные корзинки">
+        </div>
+
+
+        <p class="weekly-offer__price">Цена: 990 руб.</p>
+        <a class="weekly-offer__order button" href="#">Заказать</a>
+
       </div>
-      <p class="weekly-offer__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <table class="weekly-offer__options">
-        <tr class="weekly-offer__row">
-          <td class="weekly-offer__cell">
-            Цвет:
-          </td>
-          <td class="weekly-offer__cell">
-            «Тиффани»/серый
-          </td>
-        </tr>
-        <tr class="weekly-offer__row">
-          <td class="weekly-offer__cell">
-            Диаметр:
-          </td>
-          <td class="weekly-offer__cell">
-            25 см
-          </td>
-        </tr>
-        <tr class="weekly-offer__row">
-          <td class="weekly-offer__cell">
-            Высота:
-          </td>
-          <td class="weekly-offer__cell">
-            15 см
-          </td>
-        </tr>
-      </table>
-      <img class="weekly-offer__image" src="https://via.placeholder.com/260*315" width="260" height="315"
-        alt="Товар недели - вязаные корзинки">
-      <b class="weekly-offer__price">Цена: 990 руб.</b>
-      <a class="weekly-offer__order button" href="#">Заказать</a>
     </section>
 
     <section class="adventages content-wrapper">
@@ -125,42 +133,42 @@
     </section>
 
     <section class="reviews content-wrapper">
-      <h2 class="reviews__title section-title">Отзывы</h2>
-      <blockquote class="reviews__item">
-        <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
-          как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
-          стали более стильными, а также набирают больше лайков!</p>
+      <div class="reviews__wrapper">
+        <h2 class="reviews__title section-title">Отзывы</h2>
+        <blockquote class="reviews__item">
+          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+            лайков,
+            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
+            стали более стильными, а также набирают больше лайков!</p>
 
           <cite class="reviews__author"><b class="reviews__name">Анастасия Красильникова</b><br>@misssssiskras</cite>
-      </blockquote>
-      <div class="reviews__navigation">
-        <button class="reviews__button reviews__button--back" type="button">Назад</button>
-        <button class="reviews__button reviews__button--forward" type="button">Вперёд</button>
+        </blockquote>
+        <div class="reviews__navigation">
+          <button class="reviews__button reviews__button--back" type="button">Назад</button>
+          <button class="reviews__button reviews__button--forward" type="button">Вперёд</button>
+        </div>
+        <a class="reviews__feedback button" href="#">Написать</a>
       </div>
-      <a class="reviews__feedback button" href="#">Написать</a>
     </section>
 
     <section class="contacts content-wrapper">
       <h2 class="contacts__title section-title">Контакты</h2>
       <div class="contacts__contacts-wrapper">
-        <table class="contacts__info">
-          <tr>
-            <td class="contacts__type">
-              e-mail:
-            </td>
-            <td class="contacts__adress">
-              <a class="contacts__email" href="#">info@mimimishkashop.ru</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="contacts__type">
-              адрес:
-            </td>
-            <td class="contacts__adress">
-              г. Санкт-Петербург,<br>ул. Большая<br>Конюшенная,<br>д. 19/8, офис 101
-            </td>
-          </tr>
-        </table>
+        <dl class="contacts__info">
+          <dt class="contacts__type">
+            e-mail:
+          </dt>
+          <dd class="contacts__adress">
+            <a class="contacts__email" href="#">info@mimimishkashop.ru</a>
+          </dd>
+          <dt class="contacts__type">
+            адрес:
+          </dt>
+          <dd class="contacts__adress">
+            г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101
+          </dd>
+
+        </dl>
       </div>
       <div class="contacts__map map">
         <img src="#" width="320" height="455" alt="карта">
@@ -171,8 +179,12 @@
   </main>
 
   <footer class="page-footer content-wrapper">
+    <a class="page-footer__logo" href="#">
+      <img class="page-footer__img-logo"  src="https://via.placeholder.com/105x35" width="105" height="35" alt="логотип Mishka">
+    </a>
     <ul class="page-footer__social social-list">
-      <li class="social-list__item social-list__item--instagram"><a class="social-list__link" href="#">instagram</a></li>
+      <li class="social-list__item social-list__item--instagram"><a class="social-list__link" href="#">instagram</a>
+      </li>
       <li class="social-list__item social-list__item--facebook"><a class="social-list__link" href="#">facebook</a></li>
       <li class="social-list__item social-list__item--twitter"><a class="social-list__link" href="#">twitter</a></li>
     </ul>
