@@ -82,3 +82,15 @@
   }
 
 }
+
+@media (min-width: $desktop) {
+  .reviews__wrapper {
+    margin-bottom: 150px;
+    padding-left: 175px;
+
+  }
+
+  .reviews__item {
+    padding-right: 100px;
+  }
+}
