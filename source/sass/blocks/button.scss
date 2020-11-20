@@ -20,7 +20,8 @@
   color: $grey-dark;
   border: 1px solid $grey-dark;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
     background-color: $grey-dark;
   }

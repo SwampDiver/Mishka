@@ -8,7 +8,6 @@
   align-items: center;
   padding: 0;
 
-
 }
 
 .adventages__item {
@@ -31,7 +30,10 @@
   }
 
   .adventages__item {
-    min-width: 334px;
+    width: 334px;
+
+    font-size: 20px;
+    line-height: 22px;
 
 
     &--style {
@@ -49,9 +51,27 @@
     &--support {
       order: 3;
     }
+
     &--packaging {
       order: 5;
     }
+  }
+
+}
+
+@media (min-width: $desktop) {
+  .adventages {
+    padding-left: 225px;
+  }
+
+  .adventages__list {
+    justify-content: flex-start;
+  }
+
+  .adventages__item {
+    width: 350px;
+
+
   }
 
 }
