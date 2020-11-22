@@ -1,0 +1,16 @@
+.page-header {
+
+  &--index {
+    background-color: #f9f9f9;
+  }
+
+
+
+  &--catalog {
+    background-color: $grey-background;
+  }
+
+  &--form {
+    background-color: $grey-background;
+  }
+}

@@ -1,18 +1,15 @@
 @media (min-width: $desktop) {
   .stock-nav {
-    position: absolute;
 
-    left: 50px;
-    top: 107px;
+    display: flex;
+    align-items: center;
 
+    padding: 0 50px;
 
-
+    font-size: 15px;
   }
 
-  // .stock-nav__item {
-  //     // margin-left: 0;
-  // //     padding-left: 0;
-  // }
+
 
   .stock-nav__link {
     padding: 15px 28px;
