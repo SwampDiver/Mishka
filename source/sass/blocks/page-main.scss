@@ -1,11 +1,26 @@
 .page-main__header {
   margin-bottom: 30px;
   padding: 75px 0;
-  background-color: $gray-background;
+
+  background-color: $grey-background;
 }
 
 .page-main__title {
   text-align: center;
   font-size: 27px;
   line-height: 30px;
+}
+
+@media (min-width: $tablet) {
+  .page-main__header {
+    margin-bottom: 80px;
+  }
+
+}
+
+
+@media (min-width: $desktop) {
+  .page-main__header {
+    margin-bottom: 140px;
+  }
 }
