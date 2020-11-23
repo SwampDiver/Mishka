@@ -58,11 +58,12 @@
 
 
     <form class="order" action="https://echo.htmlacademy.ru">
-      <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
+      <p class="order__description content-wrapper">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
         мы
         свяжемся с вами, чтобы уточнить детали.</p>
 
-      <fieldset class="order__fieldset order__fieldset--type">
+
+      <fieldset class="order__fieldset order__fieldset--type content-wrapper">
 
         <legend class="order__legend">
           <span class="order__legend-text">Тип</span>
@@ -77,34 +78,37 @@
         </div>
       </fieldset>
 
-      <fieldset class="order__fieldset order__fieldset--color">
+      <div class="order__block-wrapper">
 
-        <legend class="order__legend">
-          <span class="order__legend-text">Цвет</span>
-        </legend>
+        <fieldset class="order__fieldset order__fieldset--color content-wrapper">
 
-        <div class="order__content-wrapper order__content-wrapper--checkbox">
-          <input class="visually-hidden" type="checkbox" name="color-white" id="white" checked>
-          <label class="order__lable order__lable--checkbox" for="white">Белый</label>
+          <legend class="order__legend">
+            <span class="order__legend-text">Цвет</span>
+          </legend>
 
-          <input class="visually-hidden" type="checkbox" name="color-grey" id="grey" checked>
-          <label class="order__lable order__lable--checkbox" for="grey">Серый</label>
+          <div class="order__content-wrapper order__content-wrapper--checkbox">
+            <input class="visually-hidden" type="checkbox" name="color-white" id="white" checked>
+            <label class="order__lable order__lable--checkbox" for="white">Белый</label>
 
-          <input class="visually-hidden" type="checkbox" name="color-tiffany" id="tiffany">
-          <label class="order__lable order__lable--checkbox" for="tiffany">«Тиффани»</label>
+            <input class="visually-hidden" type="checkbox" name="color-grey" id="grey" checked>
+            <label class="order__lable order__lable--checkbox" for="grey">Серый</label>
 
-          <input class="visually-hidden" type="checkbox" name="color-black" id="black">
-          <label class="order__lable order__lable--checkbox" for="black">Черный</label>
+            <input class="visually-hidden" type="checkbox" name="color-tiffany" id="tiffany">
+            <label class="order__lable order__lable--checkbox" for="tiffany">«Тиффани»</label>
 
-          <input class="visually-hidden" type="checkbox" name="color-pink" id="pink">
-          <label class="order__lable order__lable--checkbox" for="pink">Розовый</label>
+            <input class="visually-hidden" type="checkbox" name="color-black" id="black">
+            <label class="order__lable order__lable--checkbox" for="black">Черный</label>
 
-          <input class="visually-hidden" type="checkbox" name="color-orange" id="orange">
-          <label class="order__lable order__lable--checkbox" for="orange">Оранжевый</label>
-        </div>
-      </fieldset>
+            <input class="visually-hidden" type="checkbox" name="color-pink" id="pink">
+            <label class="order__lable order__lable--checkbox" for="pink">Розовый</label>
 
-      <fieldset class="order__fieldset order__fieldset--name">
+            <input class="visually-hidden" type="checkbox" name="color-orange" id="orange">
+            <label class="order__lable order__lable--checkbox" for="orange">Оранжевый</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <fieldset class="order__fieldset order__fieldset--name content-wrapper">
         <legend class="order__legend">
           <span class="order__legend-text">ФИО</span>
         </legend>
@@ -131,30 +135,34 @@
 
       </fieldset>
 
-      <fieldset class="order__fieldset order__fieldset--phone">
+      <div class="order__block-wrapper">
 
-        <legend class="order__legend">
-          <span class="order__legend-text">Тел</span>
-        </legend>
 
-        <div class="order__content-wrapper">
-          <input class="order__text order__text--phone" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*"
-            aria-lablel="Номер телефона">
-        </div>
-      </fieldset>
+        <fieldset class="order__fieldset order__fieldset--phone content-wrapper">
 
-      <fieldset class="order__fieldset order__fieldset--email">
-        <legend class="order__legend">
-          <span class="order__legend-text">e-mail</span>
-        </legend>
-        <div class="order__content-wrapper">
-          <input class="order__text order__text--email" type="email" name="email" id="email" placeholder="Ваш Email*"
-            aria-lablel="e-mail">
-        </div>
-      </fieldset>
+          <legend class="order__legend">
+            <span class="order__legend-text">Тел</span>
+          </legend>
 
-      <fieldset class="order__fieldset order__fieldset--message">
-        <legend class="order__legend">
+          <div class="order__content-wrapper">
+            <input class="order__text order__text--phone" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*"
+              aria-lablel="Номер телефона">
+          </div>
+        </fieldset>
+
+        <fieldset class="order__fieldset order__fieldset--email content-wrapper">
+          <legend class="order__legend order__legend--email">
+            <span class="order__legend-text">e-mail</span>
+          </legend>
+          <div class="order__content-wrapper">
+            <input class="order__text order__text--email" type="email" name="email" id="email" placeholder="Ваш Email*"
+              aria-lablel="e-mail">
+          </div>
+        </fieldset>
+      </div>
+
+      <fieldset class="order__fieldset order__fieldset--message content-wrapper">
+        <legend class="order__legend order__legend--message">
           <span class="order__legend-text">Доп</span>
         </legend>
 
