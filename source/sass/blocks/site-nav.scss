@@ -20,9 +20,9 @@
 }
 
 @media (min-width: $desktop) {
-  
+
   .site-nav__item {
-    margin-left: 50px;
+    // margin-left: 50px;
 
     &:not(:first-child) {
       margin-left: 0;
