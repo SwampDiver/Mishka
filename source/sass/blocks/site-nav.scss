@@ -1,6 +1,4 @@
-.site-nav__link {
-  display: block;
-  padding: 30px 30px 30px 75px;
+.site-nav__item {
   border-bottom: 1px solid $grey-light;
 
   &:first-child {
@@ -8,9 +6,18 @@
   }
 }
 
+
+.site-nav__link {
+  display: block;
+  padding: 30px 30px 30px 75px;
+}
+
 @media (min-width: $tablet) {
   .site-nav__link {
     padding: 20px 32px 20px 50px;
+  }
+
+  .site-nav__item {
     border: none;
 
     &:first-child {
@@ -22,7 +29,7 @@
 @media (min-width: $desktop) {
 
   .site-nav__item {
-    // margin-left: 50px;
+    border-bottom: none;
 
     &:not(:first-child) {
       margin-left: 0;

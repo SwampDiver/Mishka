@@ -9,15 +9,14 @@
 </head>
 
 <body class="page">
-
   <header class="page-header page-header--index">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--no-js">  <!-- main-nav--closed main-nav--no-js-->
       <div class="main-nav__logo-wrapper">
         <a class="main-nav__link-logo">
-          <img class="main-nav__image-logo" src="https://via.placeholder.com/90x40" width="90" height="40"
+          <img class="main-nav__image-logo" src="img/mishka-logo-mobile.svg.svg" width="90" height="40"
             alt="Магазин <<Mishka>>">
         </a>
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <button class="main-nav__toggle" id="toggle-button" type="button" aria-label="Открыть меню"></button>
       </div>
 
       <ul class="main-nav__site-list site-nav">
@@ -112,11 +111,8 @@
         <div class="weekly-offer__image-wrapper">
           <img class="weekly-offer__image" src="#" width="260" height="315" alt="Товар недели - вязаные корзинки">
         </div>
-
-
         <p class="weekly-offer__price">Цена: 990 руб.</p>
         <a class="weekly-offer__order button" href="#">Заказать</a>
-
       </div>
     </section>
 
@@ -145,8 +141,8 @@
           <cite class="reviews__author"><b class="reviews__name">Анастасия Красильникова</b><br>@misssssiskras</cite>
         </blockquote>
         <div class="reviews__navigation">
-          <button class="reviews__button reviews__button--back" type="button">Назад</button>
-          <button class="reviews__button reviews__button--forward" type="button">Вперёд</button>
+          <button class="reviews__button reviews__button--back" type="button" aria-label="Предыдущий отзыв"></button>
+          <button class="reviews__button reviews__button--forward" type="button" aria-label="Следующий отзыв"></button>
         </div>
         <a class="reviews__feedback button" href="#">Написать</a>
       </div>
@@ -175,29 +171,50 @@
         <img src="https://via.placeholder.com/320x455" width="320" height="455" alt="карта">
         <!--временно-->
       </div>
-      <a class="contacts__write-us button" href="#">Напишите нам</a>
+      <div class="content-wrapper">
+        <a class="contacts__write-us button" href="#">Напишите нам</a>
+      </div>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-
       <a class="page-footer__logo" href="#">
         <img class="page-footer__img-logo" src="https://via.placeholder.com/105x35" width="105" height="35"
           alt="логотип Mishka">
       </a>
       <ul class="page-footer__social social-list">
-        <li class="social-list__item social-list__item--instagram"><a class="social-list__link" href="#">instagram</a>
-        </li>
-        <li class="social-list__item social-list__item--facebook"><a class="social-list__link" href="#">facebook</a>
-        </li>
-        <li class="social-list__item social-list__item--twitter"><a class="social-list__link" href="#">twitter</a></li>
+        <li class="social-list__item social-list__item--instagram"><a class="social-list__link" href="#"
+            aria-label="instagram"></a></li>
+        <li class="social-list__item social-list__item--facebook"><a class="social-list__link" href="#"
+            aria-label="facebook"></a></li>
+        <li class="social-list__item social-list__item--twitter"><a class="social-list__link" href="#"
+            aria-label="twitter"></a></li>
       </ul>
       <p class="page-footer__developed-by">
         <a class="page-footer__developed-by-link" href="#">Разработано</a>
       </p>
     </div>
   </footer>
-</body>
 
+  <script>
+    const navMain = document.querySelector('.main-nav');
+    const navToggle = document.getElementById('toggle-button');
+    // const navToggle = document.querySelector('main-nav__toggle');
+
+    navMain.classList.remove('main-nav--no-js');
+    navMain.classList.add('main-nav--closed');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
+
+</body>
 </html>

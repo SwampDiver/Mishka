@@ -1,10 +1,11 @@
 .banner-nav {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .banner-nav__item {
-  padding: 0;
+  flex-grow: 1;
+  width: 320px;
 }
 
 .banner-nav__link {
@@ -19,8 +20,21 @@
     bottom: 0;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   &:hover {
     transform: translateY(-5px);
+
 
     &::before {
       bottom: -5px;
@@ -34,17 +48,61 @@
     background-color: $aqua-light;
 
     &::before {
-      background-color: $aqua-light;
+      background-color: $aqua-light--hover;
+    }
+
+    &::after {
+      width: 40px;
+      height: 62px;
+
+      right: 35px;
+      background-image: url(../../img/icon-interior.svg);
+      opacity: 0.2;
+    }
+
+    &:hover {
+      background-color: $aqua-light--hover;
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+    &:active .banner-nav__text {
+      color: rgba( 255, 255, 255, 0.3);
     }
   }
+
 
   &--toys {
     background-color: $aqua-dark;
 
     &::before {
-      background-color: $aqua-dark;
+      background-color: $aqua-dark--hover;
+    }
+
+    &::after {
+      width: 62px;
+      height: 62px;
+
+      right: 27px;
+      background-image: url(../../img/icon-toy.svg);
+      opacity: 0.2;
+    }
+
+    &:hover {
+      background-color: $aqua-dark--hover;
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+
+    &:active .banner-nav__text {
+      color: rgba( 255, 255, 255, 0.3);
     }
   }
+
+
 }
 
 .banner-nav__text {
