@@ -11,14 +11,49 @@
 }
 
 .adventages__item {
-  padding: 90px 0 30px 0;
+  padding: 60px 7px 30px 7px;
 
   width: 260px;
 
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+
+  background-repeat: no-repeat;
+
+
+  &--ecology {
+    background-image: url(../img/icon-feature-flower.svg);
+    background-position: 15px 0;
+
+  }
+
+  &--style {
+    background-image: url(../img/icon-feature-money.svg);
+    background-position: 7px 0;
+  }
+
+  &--likes {
+    background-image: url(../img/icon-feature-heart.svg);
+    background-position: 14px 0;
+  }
+
+  &--hendmade {
+    background-image: url(../img/icon-feature-ball.svg);
+    background-position: 9px 0;
+  }
+
+  &--support {
+    background-image: url(../img/icon-feature-rocket.svg);
+    background-position: 0px 0;
+  }
+
+  &--packaging {
+    background-image: url(../img/icon-feature-gift.svg);
+    background-position: 10px 0;
+  }
 }
+
 
 
 @media (min-width: $tablet) {
@@ -30,7 +65,8 @@
   }
 
   .adventages__item {
-    width: 334px;
+    width: 307px;
+    flex-grow: 1;
 
     font-size: 20px;
     line-height: 22px;

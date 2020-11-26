@@ -1,5 +1,12 @@
-$tablet: 768px;
-$desktop: 1150px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-only-width: 767px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$tablet: ~"(min-width: ${tablet-width})";
+$desktop: ~"(min-width: ${tablet-width})";
+
 
 $white: #ffffff;
 $black: #000000;

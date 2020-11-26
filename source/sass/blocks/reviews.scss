@@ -30,16 +30,22 @@
 }
 
 .reviews__button {
-  box-sizing: border-box;
   width: 50%;
+  padding: 25px 10px;
 
-
-  padding: 15px 10px;
-
-  text-align: center;
   border: 1px solid $grey-light;
 
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &--back {
+    background-image: url(../../img/icon-left-arrow.svg);
+  }
+
+  &--forward {
+    background-image: url(../../img/icon-right-arrow.svg);
+  }
 }
 
 .reviews__button--forward {
@@ -50,6 +56,7 @@
 @media (min-width: $tablet) {
   .reviews__wrapper {
     position: relative;
+    margin-bottom: 150px;
 
   }
 
@@ -72,7 +79,6 @@
     border: none;
   }
 
-
   .reviews__feedback {
     position: absolute;
     top: 0;
@@ -80,7 +86,6 @@
 
     width: 175px;
   }
-
 }
 
 @media (min-width: $desktop) {

@@ -4,6 +4,16 @@
 
 .banner__content-wrapper {
   padding: 71px 0 0;
+
+
+  background-image: url(../../img/hero-desktop@1x.jpg);
+  background-size: 575px 373px;
+  background-position: center -20px;
+  background-repeat: no-repeat;
+
+  @media (max-width: $mobile-only) {
+    min-height: 490px;
+  }
 }
 
 
@@ -26,12 +36,14 @@
 
   .banner__content-wrapper {
     padding: 71px 50px 0;
+
+
   }
 
 }
 
 @media (min-width: $desktop) {
- 
+
   .banner__content-wrapper {
 
     padding: 150px 0 0;
