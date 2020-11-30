@@ -93,6 +93,8 @@
     content: "";
     position: absolute;
 
+    display: none;
+
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
@@ -113,15 +115,25 @@
     content: "";
     position: absolute;
 
-    left: 12px;
-    top: 26px;
+    display: none;
 
-    width: 23px;
-    height: 18px;
+    left: 10px;
+    top: 27px;
 
-    background-color: tomato;
+    width: 22px;
+    height: 16px;
+
+    background-image: url(../../img/icon-tick.svg);
+    background-repeat: no-repeat;
+    background-size: 22px, 16px;
   }
 }
+
+.order__input--radio:checked+.order__lable--radio::after,
+.order__input--checkbox:checked+.order__lable--checkbox::after {
+  display: block;
+}
+
 
 .order__lable--text {
   padding: 0 10px 0 0;
@@ -281,6 +293,18 @@
       width: 20px;
       height: 20px;
     }
+  }
+
+  .order__lable--checkbox {
+    &::after {
+      top: 29px;
+
+      width: 33px;
+      height: 23px;
+
+      background-size: 33px, 23px;
+    }
+
   }
 
   .order__input-wrapper {

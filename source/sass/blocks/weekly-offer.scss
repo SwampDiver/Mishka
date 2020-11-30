@@ -1,3 +1,25 @@
+.weekly-offer {
+  position: relative;
+
+  margin-bottom: 70px;
+  padding-bottom: 50px;
+
+  &::after {
+    position: absolute;
+
+    content: "";
+
+    width: 100%;
+    height: 25px;
+
+    left: 0;
+    bottom: -43px;
+
+    background-image: url(../../img/bg-zigzag-line.svg);
+    background-size: 320px 20px;
+  }
+}
+
 .weekly-offer__titles {
   display: flex;
   flex-direction: column;
@@ -19,8 +41,6 @@
 }
 
 .weekly-offer__description {
-
-
   margin: 0 0 20px;
   color: $grey-dark;
 
@@ -45,19 +65,11 @@
 .weekly-offer__image-wrapper {
   margin: 0 auto;
   width: 260px;
-  height: 315px;
-}
-
-.weekly-offer__image {
-  display: block;
-  width: 260px;
   height: auto;
-  background-color: #000;
+  background-color: $grey-background;
 }
 
 .weekly-offer__price {
-
-
   margin: 0 auto 25px;
 
   text-align: center;
@@ -68,11 +80,21 @@
   font-weight: 700;
 }
 
-.weekly-offer__order {
-  margin-bottom: 70px;
-}
+
 
 @media (min-width: $tablet) {
+  .weekly-offer {
+
+    &::after {
+
+      height: 34px;
+
+      bottom: -43px;
+
+      background-size: 768px 28px;
+    }
+  }
+
   .weekly-offer__titles {
     flex-direction: row;
     justify-content: space-between;
@@ -91,10 +113,13 @@
 
   .weekly-offer__wrapper {
     position: relative;
+
+
     padding-right: 380px;
   }
 
   .weekly-offer__description {
+    min-height: 72px;
     margin-bottom: 50px;
   }
 
@@ -109,13 +134,10 @@
     right: 0;
 
     width: 333px;
-    height: 405px;
-
-    background-color: tomato;
   }
 
   .weekly-offer__image {
-    width: 333px;
+    display: block;
   }
 
   .weekly-offer__price {
@@ -125,22 +147,38 @@
 }
 
 @media (min-width: $desktop) {
+  .weekly-offer {
+
+    &::after {
+
+      height: 30px;
+
+      bottom: -43px;
+
+      background-size: 1050px 28px;
+    }
+  }
+
   .weekly-offer__titles {
     justify-content: start;
   }
+
   .weekly-offer__title {
     order: 0;
     padding: 20px 25px;
     min-width: 171px;
 
   }
+
   .weekly-offer__subtitle {
     margin: 55px 0;
     padding: 0;
   }
+
   .weekly-offer__wrapper {
     padding: 0 590px 0 175px;
   }
+
   .weekly-offer__description {
     margin-bottom: 65px;
     font-size: 17px;
@@ -156,7 +194,6 @@
     z-index: -1;
 
     width: 525px;
-    height: 635px;
   }
 
   .weekly-offer__price {

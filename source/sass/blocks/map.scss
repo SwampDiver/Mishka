@@ -1,0 +1,17 @@
+.map {
+  width: 322px;
+  height: 458px;
+  background-color: &grey-background;
+}
+
+@media (min-width: $tablet) {
+  .map {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .map {
+    width: 525px;
+  }
+}

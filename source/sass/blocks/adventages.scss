@@ -58,6 +58,10 @@
 
 @media (min-width: $tablet) {
 
+  .adventages {
+    margin-bottom: 80px;
+  }
+
   .adventages__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -97,6 +101,7 @@
 
 @media (min-width: $desktop) {
   .adventages {
+    margin-bottom: 90px;
     padding-left: 225px;
   }
 

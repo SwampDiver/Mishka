@@ -30,10 +30,10 @@
 
 .main-nav__link-logo {
   display: block;
-  width: 90px;
-
 
   margin: 17px 0;
+  width: 87px;
+  height: 35px;
 }
 
 .main-nav__toggle {
@@ -85,12 +85,9 @@ background-image: url(../img/icon-menu-open.svg);
     display: none;
   }
 
-
 }
 
-
-
-@media @tablet {
+@media (min-width: $tablet) {
   .main-nav {
     display: flex;
     flex-wrap: wrap;
@@ -103,6 +100,16 @@ background-image: url(../img/icon-menu-open.svg);
     min-width: 240px;
 
     padding: 15px 80px 15px 50px;
+  }
+
+  .main-nav__link-logo {
+    width: 111px;
+    height: 48px;
+  }
+
+  .main-nav__image-logo {
+    width: 113px;
+    height: 48px;
   }
 
   .main-nav__toggle {
@@ -146,7 +153,6 @@ background-image: url(../img/icon-menu-open.svg);
 }
 
 
-
 @media (min-width: $desktop) {
   .main-nav {
     position: relative;
@@ -164,12 +170,17 @@ background-image: url(../img/icon-menu-open.svg);
   .main-nav__link-logo {
     margin: 0 auto;
     padding: 5px 0;
+
+    width: 150px;
+    height: 72px;
+  }
+  .main-nav__image-logo {
+    width: 150px;
+    height: 72px;
   }
 
   .main-nav__site-list {
-    flex-grow: 0;
-
-    order: 0;
+     order: 0;
 
     font-size: 17px;
     background-color: $white;
