@@ -14,25 +14,52 @@
 }
 
 .production__title {
+  position: relative;
+
   margin: 0;
-  padding: 0 20px 0 90px;
+  padding: 20px 20px 20px 90px;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 50%;
+    left: 33px;
+
+    transform: translateY(-50%);
+
+    width: 33px;
+    height: 24px;
+
+    background-image: url(../../img/icon-video.svg);
+    background-repeat: no-repeat;
+    background-size: 33px, 24px;
+  }
 }
 
 
 .production__video-wrapper {
   position: relative;
   margin: 0 auto;
-  // overflow: hidden;
+  overflow: hidden;
   width: 260px;
   height: 150px;
-
-  border: 1px solid red;
 }
 
 .production__video {
   display: block;
   width: 100%;
   height: 100%;
+
+  background-image: url(../../img/video-mobile@1x.jpg);
+  background-size: 260px 150px;
+  background-repeat: no-repeat;
+  background-color: $aqua-light;
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dpi) {
+    background-image: url(../../img/video-mobile@2x.jpg);
+  }
 }
 
 .production__play-button {
@@ -41,10 +68,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  width: 103px;
+  height: 78px;
+  border: 0;
 
-  width: 105px;
-  height: 77px;
-  background-color: tomato;
+  background-image: url(../../img/icon-play.svg);
+  background-repeat: no-repeat;
+  background-size: 103px 78px;
+  background-color: transparent;
+
+  cursor: pointer;
 }
 
 .production__description-wrapper {
@@ -61,14 +94,30 @@
 
   .production__title {
     padding: 35px 20px 35px 105px;
+
+   &::before {
+     left: 40px;
+   }
   }
 
   .production__video-wrapper {
     order: -1;
-    width: 666px;
-    height: 456px;
+    width: 668px;
+    height: 455px;
 
   }
+
+  .production__video {
+    background-image: url(../../img/video-tablet@1x.jpg);
+    background-size: 668px 455px;
+
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dpi) {
+      background-image: url(../../img/video-tablet@2x.jpg);
+    }
+  }
+
 
   .production__description-wrapper {
     padding: 0 40px 45px 40px;
@@ -96,6 +145,12 @@
 
   .production__title {
     padding: 100px 65px 43px 77px;
+
+    &::before {
+      top: 66px;
+      left: 77px;
+    }
+
   }
 
   .production__video-wrapper {
@@ -103,6 +158,17 @@
     top: 0;
     left: 0;
     width: 682px;
+  }
+
+  .production__video {
+    background-image: url(../../img/video-desktop@1x.jpg);
+    background-size: 682px 455px;
+
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dpi) {
+      background-image: url(../../img/video-desktop@2x.jpg);
+    }
   }
 
   .production__description-wrapper {
