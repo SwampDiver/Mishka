@@ -28,8 +28,11 @@
 
 @media (min-width: $desktop) {
 
+
   .site-nav__item {
     border-bottom: none;
+    padding-left: 20px;
+
 
     &:not(:first-child) {
       margin-left: 0;
@@ -39,10 +42,8 @@
   }
 
   .site-nav__link {
-    padding: 32px 35px 32px 35px;
+    padding: 32px 35px 32px 30px;
 
-    &:first-child {
-      padding-left: 50px;
-    }
+
   }
 }

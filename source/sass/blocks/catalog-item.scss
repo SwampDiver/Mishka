@@ -59,7 +59,19 @@
   width: 25px;
   height: 25px;
 
-  background-color: #8d4c4c;
+  background-color: transparent;
+
+  &:hover .catalog-item__icon {
+    fill: $aqua-light;
+    opacity: 1;
+  }
+  &:active .catalog-item__icon {
+    opacity: 0.3;;
+  }
+
+}
+.catalog-item__icon {
+  opacity: 0.2;
 }
 
 

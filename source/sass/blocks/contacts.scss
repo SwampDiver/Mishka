@@ -52,7 +52,7 @@
 
 .contacts__write-us {
   margin: 40px auto;
-
+  max-width: 260px;
 }
 
 @media (min-width: $tablet) {
@@ -97,6 +97,7 @@
 
   .contacts__write-us {
     margin: 50px auto;
+    max-width: 230px;
   }
 }
 
