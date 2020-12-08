@@ -22,12 +22,44 @@ navToggle.addEventListener('click', function () {
 // Модальное окно заказа
 
 
-// const orderButton = document.querySelector('.weekly-offer__order');
-// const popup = document.querySelector('.modal');
+const btnOrder = document.querySelector(`.weekly-offer__order`);
+const btnOrders = document.querySelectorAll(`.catalog-item__icon`);
+const popup = document.querySelector(`.modal`);
+const overlay = document.querySelector(`.modal__overlay`);
+const popupBtn = document.querySelector(`.modal__button`);
 
-//   orderButton.addEventListener("click", function () {
-//      popup.classList.add("modal--opened");
-//   });
+const openPopup = function () {
+    popup.classList.add(`modal--opened`);
+}
 
+const closePopup = function () {
+    popup.classList.remove(`modal--opened`);
+}
 
+function orderHandler() {
+  openPopup();
+
+  overlay.addEventListener(`click`, closePopup);
+
+  window.addEventListener(`keydown`, function (evt) {
+    if (evt.keyCode === 27) {
+      if (popup.classList.contains(`modal--opened`)) {
+        closePopup();
+      }
+    }
+  });
+}
+
+if (btnOrder) {
+  btnOrder.addEventListener(`click`, orderHandler);
+} else {
+  for (let i = 0; i < btnOrders.length; i++) {
+    btnOrders[i].addEventListener(`click`, orderHandler);
+  }
+}
+
+popupBtn.addEventListener(`click`, function(evt) {
+  evt.preventDefault();
+  closePopup();
+});
 
