@@ -19,11 +19,10 @@
             <source media="(min-width:1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
 
-            <img class="main-nav__image-logo" src="img/logo-mobile.svg" width="87" height="35"
-              alt="Логотип <<Mishka>>">
+            <img class="main-nav__image-logo" src="img/logo-mobile.svg" width="87" height="35" alt="Логотип <<Mishka>>">
           </picture>
         </a>
-        <button class="main-nav__toggle" id="toggle-button" type="button" aria-label="Открыть меню"></button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
 
       <ul class="main-nav__site-list site-nav">
@@ -196,7 +195,7 @@
         <picture>
           <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-          <img class="map__image" src="img/map-mobile@1x.jpg" srcset="map-mobile@2x.jpg x2"
+          <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
             alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
       </div>
@@ -249,6 +248,34 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal--closed">
+    <div class="modal__window">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form" action="POST">
+        <fieldset class="modal__fieldset">
+          <legend class="modal__legend">Выберите размер:</legend>
+
+          <div class="modal__size-wrapper">
+
+            <input class="modal__input visually-hidden" type="radio" name="size" id="size-s" value="size-s" checked>
+            <label class="modal__label" for="size-s">s</label>
+
+
+            <input class="modal__input visually-hidden" type="radio" name="size" id="size-m" value="size-m">
+            <label class="modal__label" for="size-m">m</label>
+
+
+            <input class="modal__input visually-hidden" type="radio" name="size" id="size-l" value="size-l">
+            <label class="modal__label" for="size-l">l</label>
+          </div>
+        </fieldset>
+
+        <button class="button modal__button" type="submit">Добавить</button>
+
+      </form>
+    </div>
+  </section>
 
   <script src="js/script.js"></script>
 
