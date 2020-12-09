@@ -7,6 +7,9 @@ const minify = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+// const posthtml = require("gulp-posthtml");
+// const include = require("posthtml-include");
 const sync = require("browser-sync").create();
 
 sass.compiler = require('node-sass');
@@ -37,11 +40,32 @@ gulp.task("images", function() {
 
 // Webp
 
+
 gulp.task("webp", function() {
   return gulp.src("source/img/**/*/.{png,jpg}")
-
   .pipe(gulp.dest("source/img"));
 });
+
+//Sprite
+gulp.task("sprite", function() {
+  return gulp.src("source/img/icon-*.svg")
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("source/img"))
+});
+
+gulp.task("html", function() {
+  return gulp.src("source/*.html")
+.pipe(posthtml([
+  include()
+]))
+  .pipe(gulp.dest("source"));
+});
+
+
+
 
 // Styles
 
