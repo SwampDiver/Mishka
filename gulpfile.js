@@ -2,8 +2,11 @@ const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
+const autoprefixer = require("gulp-autoprefixer");
+const minify = require("gulp-csso");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const sync = require("browser-sync").create();
 
 sass.compiler = require('node-sass');
@@ -19,6 +22,26 @@ gulp.task('sass:watch', function () {
 });
 
 
+// Imagesmin
+
+gulp.task("images", function() {
+  return gulp.src("source/img/**/*/.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("source/img"));
+})
+
+// Webp
+
+gulp.task("webp", function() {
+  return gulp.src("source/img/**/*/.{png,jpg}")
+
+  .pipe(gulp.dest("source/img"));
+});
 
 // Styles
 
@@ -27,10 +50,14 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 version'],
+      grid: true
+    }))
     .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("source/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
