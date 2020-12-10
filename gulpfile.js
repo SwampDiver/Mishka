@@ -13,12 +13,28 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const webp = require('gulp-webp');
+const svgstore = require('gulp-svgstore'); 
+
+function sprite() {
+  return src('app/img/icon-*.svg')
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(concat('sprite.svg'))
+  .pipe(dest('app/img'))
+}
+
+function webpConvert() {
+  return src('app/img/**/*.{png,jpg}')
+  .pipe(webp())
+  .pipe(dest('app/img/webp'))
+}
 
 
 function cleanDist() {
   return del('dist')
 }
-
 
 function images() {
   return src('app/img/**/*')
@@ -70,6 +86,7 @@ function styles() {
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
+
 function build() {
   return src([
     'app/css/style.min.css',
@@ -94,6 +111,9 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.sprite = sprite;
+exports.webpConvert = webpConvert;
+
 
 exports.build = series(cleanDist, images, build)
 exports.default = parallel(styles, scripts, browsersync, watching);
