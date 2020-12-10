@@ -1,116 +1,99 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
-const minify = require("gulp-csso");
-const rename = require("gulp-rename");
-const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
-// const posthtml = require("gulp-posthtml");
-// const include = require("posthtml-include");
-const sync = require("browser-sync").create();
+const {
+  src,
+  dest,
+  watch,
+  parallel,
+  series
+} = require('gulp');
 
-sass.compiler = require('node-sass');
-
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
-});
-
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
-});
+const scss = require('gulp-sass');
+const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
+const uglify = require('gulp-uglify-es').default;
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+const del = require('del');
 
 
-// Imagesmin
+function cleanDist() {
+  return del('dist')
+}
 
-gulp.task("images", function() {
-  return gulp.src("source/img/**/*/.{png,jpg,svg}")
-    .pipe(imagemin([
+
+function images() {
+  return src('app/img/**/*')
+  .pipe(imagemin(
+    [
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.mozjpeg({quality: 90, progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-    ]))
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"));
-})
+      imagemin.svgo({
+          plugins: [
+              {removeViewBox: true},
+              {cleanupIDs: false}
+          ]
+      })
+  ]
+  ))
+  .pipe(dest('dist/img'))
+}
 
-// Webp
+function scripts() {
+  return src([
+    'node_modules/jquery/dist/jquery.js',
+    'app/js/main.js'
+  ])
+  .pipe(concat('main.min.js'))
+  .pipe(uglify())
+  .pipe(dest('app/js'))
+  .pipe(browserSync.stream())
+}
 
+function browsersync() {
+  browserSync.init({
+    server: {
+      baseDir: "app/"
+    }
+  });
+}
 
-gulp.task("webp", function() {
-  return gulp.src("source/img/**/*/.{png,jpg}")
-  .pipe(gulp.dest("source/img"));
-});
-
-//Sprite
-gulp.task("sprite", function() {
-  return gulp.src("source/img/icon-*.svg")
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("source/img"))
-});
-
-gulp.task("html", function() {
-  return gulp.src("source/*.html")
-.pipe(posthtml([
-  include()
-]))
-  .pipe(gulp.dest("source"));
-});
-
-
-
-
-// Styles
-
-const styles = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
+function styles() {
+  return src('app/scss/style.scss')
+    .pipe(scss({
+      outputStyle: 'compressed'
+    }))
+    .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(minify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
 }
+function build() {
+  return src([
+    'app/css/style.min.css',
+    'app/fonts/**/*',
+    'app/js/main.min.js',
+    'app/*.html'
+  ], {base: 'app'})
+  .pipe(dest('dist'))
+}
+
+
+function watching() {
+  watch(['app/scss/**/*.scss'], styles);
+  watch(['app/js/main.js','!app/js/main.min.js'], scripts);
+  watch(['app/*.html']).on('change', browserSync.reload);
+}
+
 
 exports.styles = styles;
+exports.watching = watching;
+exports.browsersync = browsersync;
+exports.scripts = scripts;
+exports.images = images;
+exports.cleanDist = cleanDist;
 
-// Server
-
-const server = (done) => {
-  sync.init({
-    server: {
-      baseDir: 'source'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-exports.server = server;
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-}
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
+exports.build = series(cleanDist, images, build)
+exports.default = parallel(styles, scripts, browsersync, watching);
