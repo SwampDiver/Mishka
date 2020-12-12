@@ -14,7 +14,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore'); 
+const svgstore = require('gulp-svgstore');
+
+
 
 function sprite() {
   return src('app/img/icon-*.svg')
@@ -27,7 +29,7 @@ function sprite() {
 
 function webpConvert() {
   return src('app/img/**/*.{png,jpg}')
-  .pipe(webp())
+  .pipe(webp({quality: 90}))
   .pipe(dest('app/img/webp'))
 }
 
@@ -103,7 +105,6 @@ function watching() {
   watch(['app/js/main.js','!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
-
 
 exports.styles = styles;
 exports.watching = watching;
