@@ -10,11 +10,11 @@
 
     &:hover,
     &:focus {
-      opacity: 60%;
+      opacity: 0.6;
     }
 
     &:active {
-      opacity: 30%;
+      opacity: 0.3;
     }
 
   }
@@ -136,6 +136,7 @@
   .main-nav__user-list {
     display: flex;
     align-items: center;
+
 
     padding-left: 50px;
     background-color: $white;

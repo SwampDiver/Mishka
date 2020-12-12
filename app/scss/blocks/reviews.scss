@@ -13,7 +13,7 @@
     left: 0;
     bottom: -17px;
 
-    background-image: url(../../img/bg-zigzag-line.svg);
+    background-image: url(../img/bg-zigzag-line.svg);
     background-size: 320px 20px;
 
   }
@@ -66,11 +66,11 @@
   background-position: 50% 50%;
 
   &--back {
-    background-image: url(../../img/left-arrow.svg);
+    background-image: url(../img/left-arrow.svg);
   }
 
   &--forward {
-    background-image: url(../../img/right-arrow.svg);
+    background-image: url(../img/right-arrow.svg);
   }
 
   &:hover {
@@ -90,14 +90,14 @@
   .reviews {
     padding-top: 45px;
     padding-bottom: 10px;
-    background-image: url(../../img/review@1x.jpg);
+    background-image: url(../img/review@1x.jpg);
     background-size: 350px 457px;
     background-position: 0 0;
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dpi) {
-      background-image: url(../../img/review@2x.jpg)
+      background-image: url(../img/review@2x.jpg)
     }
 
     &::after {

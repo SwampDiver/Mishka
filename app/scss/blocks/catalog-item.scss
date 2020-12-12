@@ -26,7 +26,11 @@
   font-size: 17px;
   line-height: 24px;
 
-  &:hover,
+
+}
+
+.catalog-item__link {
+   &:hover,
   &:focus {
     opacity: 60%;
   }
@@ -57,11 +61,12 @@
 
 .catalog-item__button {
   width: 25px;
-  height: 25px;
+  height: 26px;
 
   background-color: transparent;
 
-  &:hover .catalog-item__icon {
+  &:hover .catalog-item__icon,
+  &:focus .catalog-item__icon {
     fill: $aqua-light;
     opacity: 1;
   }
