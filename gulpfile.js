@@ -17,7 +17,6 @@ const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 
 
-
 function sprite() {
   return src('app/img/icon-*.svg')
   .pipe(svgstore({
@@ -28,8 +27,7 @@ function sprite() {
 }
 
 function webpConvert() {
-  return src('app/img/**/*.{png,jpg}')
-  .pipe(webp({quality: 90}))
+  return src('app/img/content/*.{png,jpg}')
   .pipe(dest('app/img/webp'))
 }
 
@@ -116,5 +114,5 @@ exports.sprite = sprite;
 exports.webpConvert = webpConvert;
 
 
-exports.build = series(cleanDist, images, build)
+exports.build = series(cleanDist, build, images)
 exports.default = parallel(styles, scripts, browsersync, watching);
