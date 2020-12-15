@@ -163,7 +163,6 @@
 @media (min-width: $desktop) {
   .main-nav {
     position: relative;
-    justify-content: space-between;
   }
 
   .main-nav__logo-wrapper {
@@ -190,7 +189,7 @@
   .main-nav__site-list {
     position: relative;
     order: 0;
-    flex-grow: 0;
+    flex-grow: 1;
 
     border-top: none;
 
@@ -198,7 +197,7 @@
     background-color: $white;
 
     &::before {
-      right: 420px;
+      right: 480px;
     }
   }
 
@@ -206,13 +205,14 @@
   .main-nav__user-list {
     position: relative;
     order: 2;
+    flex-grow: 1;
 
-    padding-left: 10px;
+    padding-left: 80px;
 
     font-size: 17px;
 
     &::after {
-      left: 400px;
+      left: 480px;
     }
   }
 
