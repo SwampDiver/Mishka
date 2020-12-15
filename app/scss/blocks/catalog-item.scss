@@ -108,7 +108,8 @@
 
 @media (min-width: $desktop) {
   .catalog-item {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 316px;
   }
 
@@ -118,6 +119,7 @@
   }
 
   .catalog-item__wrapper {
+    flex-grow: 1;
     width: 315px;
     min-height: 197px;
   }
