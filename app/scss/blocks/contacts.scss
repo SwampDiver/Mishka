@@ -33,6 +33,11 @@
 
 }
 
+.contacts__map {
+  width: 100%;
+}
+
+
 .contacts__email {
   padding-bottom: 4px;
   border-bottom: 1px solid $aqua-form;
@@ -95,6 +100,8 @@
     width: 260px;
   }
 
+
+
   .contacts__write-us {
     margin: 50px auto;
     max-width: 230px;
@@ -107,7 +114,7 @@
     position: relative;
 
     margin: 0 auto;
-    padding: 20px 50px 105px 225px;
+    padding: 20px 100px 105px 225px;
 
 
     max-width: 1250px;
@@ -142,7 +149,7 @@
     position: absolute;
     top: 0;
     right: 50px;
-
+    width: 525px;
   }
   .contacts__button-wrapper {
     padding: 0;

@@ -1,17 +1,23 @@
 .map {
-  width: 322px;
-  height: 458px;
-  background-color: &grey-background;
+  position: relative;
+  width: 100%;
 }
 
-@media (min-width: $tablet) {
-  .map {
-    width: 768px;
-  }
+.map__interactive {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%
 }
+
 
 @media (min-width: $desktop) {
   .map {
+    position: absolute;
     width: 525px;
+    top: 0;
+    right: 100px;
+
   }
+
 }
