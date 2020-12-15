@@ -20,5 +20,9 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "jquery": "^3.5.1"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
+    "save-dev": "0.0.1-security"
   }
 }

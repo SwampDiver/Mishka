@@ -15,7 +15,14 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
+const htmlmin = require('gulp-htmlmin');
 
+
+function html() {
+  return src('app/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('dist'));
+}
 
 function sprite() {
   return src('app/img/icon-*.svg')
@@ -28,6 +35,7 @@ function sprite() {
 
 function webpConvert() {
   return src('app/img/content/*.{png,jpg}')
+  .pipe(webp())
   .pipe(dest('app/img/webp'))
 }
 
@@ -91,8 +99,7 @@ function build() {
   return src([
     'app/css/style.min.css',
     'app/fonts/**/*',
-    'app/js/main.min.js',
-    'app/*.html'
+    'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))
 }
@@ -114,5 +121,5 @@ exports.sprite = sprite;
 exports.webpConvert = webpConvert;
 
 
-exports.build = series(cleanDist, build, images)
+exports.build = series(cleanDist, build, html, images)
 exports.default = parallel(styles, scripts, browsersync, watching);
