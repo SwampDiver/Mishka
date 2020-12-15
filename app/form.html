@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mishka - Вязание на заказ</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
@@ -35,10 +36,12 @@
 
       <ul class="main-nav__user-list user-nav">
         <li class="user-nav__item">
-          <a class="user-nav__link user-nav__link--search" href="#">
-            <svg class="user-nav__icon user-nav__icon--search" width="19" height="19">
+          <a class="user-nav__link user-nav__link--search" href="#" >
+            <svg class="user-nav__icon user-nav__icon--search"  role="img" width="19" height="19">
+              <title>Поиск по сайту</title>
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
+
             <span class="user-nav__search-text">Поиск по сайту</span>
           </a>
         </li>
@@ -151,7 +154,8 @@
           </legend>
 
           <div class="order__content-wrapper">
-            <input class="order__text order__text--phone" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*" aria-lablel="Номер телефона">
+            <label class="visually-hidden" for="phone">Телефон</label>
+            <input class="order__text order__text--phone" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*">
 
               <svg class="order__input-icon order__input-icon--phone" width="25" height="24">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -165,8 +169,8 @@
           </legend>
 
           <div class="order__content-wrapper">
-
-            <input class="order__text order__text--email" type="email" name="email" id="email" placeholder="Ваш Email*" aria-lablel="e-mail">
+            <label class="visually-hidden" for="email">Электронная почта</label>
+            <input class="order__text order__text--email" type="email" name="email" id="email" placeholder="Ваш Email*">
 
             <svg class="order__input-icon order__input-icon--mail" width="32" height="32">
               <use xlink:href="img/sprite.svg#icon-mail"></use>
@@ -195,7 +199,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__link-logo" href="#" aria-label="логотип Mishka">
+      <a class="page-footer__link-logo" href="#" aria-label="интернет-магазин Mishka">
         <!-- ALT TEXT??-->
 
         <svg class="page-footer__icon-logo" width="103" height="35">
@@ -227,7 +231,7 @@
         </li>
       </ul>
       <div class="page-footer__developed-by">
-        <a class="page-footer__developed-by-link" href="#">
+        <a class="page-footer__developed-by-link" href="#" aria-label="перийти на сайт HTML Academy">
           <span class="page-footer__developed-by-text">Разработано</span>
           <svg class="page-footer__developed-by-icon" width="27" height="34">
             <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
