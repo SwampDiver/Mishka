@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mishka</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 
@@ -35,8 +36,9 @@
 
       <ul class="main-nav__user-list user-nav">
         <li class="user-nav__item">
-          <a class="user-nav__link user-nav__link--search" href="#">
-            <svg class="user-nav__icon user-nav__icon--search" width="19" height="19">
+          <a class="user-nav__link user-nav__link--search" href="#" >
+            <svg class="user-nav__icon user-nav__icon--search" role="img" width="19" height="19">
+              <title>Поиск по сайту</title>
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
             <span class="user-nav__search-text">Поиск по сайту</span>
@@ -130,7 +132,7 @@
               srcset="img/webp/triple-set-desktop@1x.webp 1x, img/webp/triple-set-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/webp/triple-set-tablet@1x.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/triple-set-mobile@1x.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
 
             <source media="(min-width: 1150px)"
               srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
@@ -208,6 +210,10 @@
           <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
             alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
+        <div class="map__interactive">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A961365b73cbc4b2d04eb51fff10579ea1ff70d056ecb5c135bd4eb490aa679d1&amp;width=100%25&amp;height=457&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+
       </div>
       <div class="contacts__button-wrapper content-wrapper">
         <a class="contacts__write-us button" href="#">Напишите нам</a>
@@ -217,7 +223,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__link-logo" href="#" aria-label="логотип Mishka">
+      <a class="page-footer__link-logo" href="#" aria-label="интернет-магазин Mishka">
         <!-- ALT TEXT??-->
 
         <svg class="page-footer__icon-logo" width="103" height="35">
@@ -249,7 +255,7 @@
         </li>
       </ul>
       <div class="page-footer__developed-by">
-        <a class="page-footer__developed-by-link" href="#">
+        <a class="page-footer__developed-by-link" href="#" aria-label="перийти на сайт HTML Academy">
           <span class="page-footer__developed-by-text">Разработано</span>
           <svg class="page-footer__developed-by-icon" width="27" height="34">
             <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
