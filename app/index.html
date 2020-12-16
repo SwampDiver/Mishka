@@ -36,7 +36,7 @@
 
       <ul class="main-nav__user-list user-nav">
         <li class="user-nav__item">
-          <a class="user-nav__link user-nav__link--search" href="#" >
+          <a class="user-nav__link user-nav__link--search" href="#">
             <svg class="user-nav__icon user-nav__icon--search" role="img" width="19" height="19">
               <title>Поиск по сайту</title>
               <use xlink:href="img/sprite.svg#icon-search"></use>
@@ -72,7 +72,7 @@
 
     <section class="banner">
       <div class="banner__content-wrapper content-wrapper">
-        <h2 class="banner__title section-title content-wrapper">Милые штуки ручной <br>работы&nbsp;для&nbsp;дома</h2>
+        <h2 class="banner__title section-title content-wrapper">Милые штуки ручной<br>работы&nbsp;для&nbsp;дома</h2>
 
         <ul class="banner__banner-list banner-nav">
           <li class="banner-nav__item">
@@ -132,7 +132,8 @@
               srcset="img/webp/triple-set-desktop@1x.webp 1x, img/webp/triple-set-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/webp/triple-set-tablet@1x.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/webp/triple-set-mobile@1x.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/webp/triple-set-mobile@1x.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
 
             <source media="(min-width: 1150px)"
               srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
@@ -162,15 +163,27 @@
     <section class="reviews content-wrapper">
       <div class="reviews__wrapper">
         <h2 class="reviews__title section-title">Отзывы</h2>
-        <blockquote class="reviews__item">
-          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
-            лайков,
-            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии
-            сразу
-            стали более стильными, а также набирают больше лайков!</p>
+          <blockquote class="reviews__item reviews__item--active">
+            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+              лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои
+              фотографии
+              сразу стали более стильными, а также набирают больше лайков!</p>
+            <cite class="reviews__author"><b class="reviews__name">Анастасия Красильникова</b><br>@misssssiskras</cite>
+          </blockquote>
 
-          <cite class="reviews__author"><b class="reviews__name">Анастасия Красильникова</b><br>@misssssiskras</cite>
-        </blockquote>
+          <blockquote class="reviews__item">
+            <p class="reviews__text">Зайчик превзошел все ожидания от увиденного на фотографии! В нем все идеально. Со
+              вкусом подобранны цвета пряжи. Связан ровно и аккуратно.</p>
+            <cite class="reviews__author"><b class="reviews__name">Ирина</b><br>@irina_90</cite>
+          </blockquote>
+
+          <blockquote class="reviews__item">
+            <p class="reviews__text">Качественная вещь, неповторимый стиль, чудесная теплая игрушка. Процесс покупки
+              оказался очень прост и удобен.</p>
+            <cite class="reviews__author"><b class="reviews__name">Татьяна Морозова</b><br>@tanyamorozova</cite>
+          </blockquote>
+        </div>
+
         <div class="reviews__navigation">
           <button class="reviews__button reviews__button--back" type="button" aria-label="Предыдущий отзыв"></button>
           <button class="reviews__button reviews__button--forward" type="button" aria-label="Следующий отзыв"></button>
@@ -211,7 +224,9 @@
             alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
         <div class="map__interactive">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A961365b73cbc4b2d04eb51fff10579ea1ff70d056ecb5c135bd4eb490aa679d1&amp;width=100%25&amp;height=457&amp;lang=ru_RU&amp;scroll=false"></script>
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A961365b73cbc4b2d04eb51fff10579ea1ff70d056ecb5c135bd4eb490aa679d1&amp;width=100%25&amp;height=457&amp;lang=ru_RU&amp;scroll=false">
+          </script>
         </div>
 
       </div>

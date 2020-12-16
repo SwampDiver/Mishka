@@ -3,8 +3,6 @@
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 
-
-
 navMain.classList.remove('main-nav--no-js');
 navMain.classList.add('main-nav--closed');
 
@@ -18,9 +16,7 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-
 // Модальное окно заказа
-
 
 const btnOrder = document.querySelector(`.weekly-offer__order`);
 const btnOrders = document.querySelectorAll(`.catalog-item__icon`);
@@ -29,11 +25,11 @@ const overlay = document.querySelector(`.modal__overlay`);
 const popupBtn = document.querySelector(`.modal__button`);
 
 const openPopup = function () {
-    popup.classList.add(`modal--opened`);
+  popup.classList.add(`modal--opened`);
 }
 
 const closePopup = function () {
-    popup.classList.remove(`modal--opened`);
+  popup.classList.remove(`modal--opened`);
 }
 
 function orderHandler() {
@@ -58,8 +54,45 @@ if (btnOrder) {
   }
 }
 
-popupBtn.addEventListener(`click`, function(evt) {
+popupBtn.addEventListener(`click`, function (evt) {
   evt.preventDefault();
   closePopup();
 });
 
+//Слайдер
+
+const prev = document.querySelector('.reviews__button--back');
+const next = document.querySelector('.reviews__button--forward');
+const slides = document.querySelectorAll('.reviews__item');
+
+let index = 0;
+
+const activeSlide = n => {
+  for (slide of slides) {
+    slide.classList.remove('reviews__item--active');
+  }
+  slides[n].classList.add('reviews__item--active');
+}
+
+const nextSlide = () => {
+  if (index == slides.length - 1) {
+    index = 0;
+    activeSlide(index);
+  } else {
+    index++;
+    activeSlide(index);
+  }
+}
+
+const prevSlide = () => {
+  if (index == 0) {
+  index = slides.length - 1;
+    activeSlide(index);
+  } else {
+    index--;
+    activeSlide(index);
+  }
+}
+
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);
