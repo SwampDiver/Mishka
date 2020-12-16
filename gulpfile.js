@@ -16,7 +16,7 @@ const del = require('del');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const htmlmin = require('gulp-htmlmin');
-
+const imgCompress  = require('imagemin-jpeg-recompress');
 
 function html() {
   return src('app/*.html')
@@ -39,32 +39,28 @@ function webpConvert() {
   .pipe(dest('app/img/webp'))
 }
 
-
 function cleanDist() {
   return del('dist')
 }
 
 function images() {
   return src('app/img/**/*')
-  .pipe(imagemin(
-    [
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({quality: 90, progressive: true}),
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.svgo({
-          plugins: [
-              {removeViewBox: true},
-              {cleanupIDs: false}
-          ]
-      })
-  ]
-  ))
-  .pipe(dest('dist/img'))
+  .pipe(imagemin([
+    imgCompress({
+      loops: 4,
+      min: 70,
+      max: 80,
+      quality: 'high'
+    }),
+    imagemin.gifsicle(),
+    imagemin.optipng(),
+    imagemin.svgo()
+  ]))
+  .pipe(dest('dist/img'));
 }
 
 function scripts() {
   return src([
-    // 'node_modules/jquery/dist/jquery.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
