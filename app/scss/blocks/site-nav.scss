@@ -13,8 +13,14 @@
 }
 
 @media (min-width: $tablet) {
+  .site-nav {
+    min-width: 400px;
+    border-top: 1px solid #e7e7e7;
+    font-size: 15px;
+  }
+
   .site-nav__link {
-    padding: 20px 32px 18px 50px;
+    padding: 18px 35px 18px 0;
   }
 
   .site-nav__item {
