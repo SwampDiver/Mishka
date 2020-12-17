@@ -14,7 +14,6 @@
 <body>
   <header class="page-header page-header--form">
     <nav class="main-nav main-nav--no-js">
-      <!-- main-nav--closed main-nav--no-js-->
       <div class="main-nav__logo-wrapper">
         <a class="main-nav__link-logo" href="index.html">
           <picture>
@@ -38,8 +37,8 @@
 
       <ul class="main-nav__user-list user-nav">
         <li class="user-nav__item">
-          <a class="user-nav__link user-nav__link--search" href="#" >
-            <svg class="user-nav__icon user-nav__icon--search"  role="img" width="19" height="19">
+          <a class="user-nav__link user-nav__link--search" href="#">
+            <svg class="user-nav__icon user-nav__icon--search" role="img" width="19" height="19">
               <title>Поиск по сайту</title>
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
@@ -74,16 +73,13 @@
     <header class="page-main__header">
       <h1 class="page-main__title section-title ">Каталог товаров</h1>
     </header>
-
     <div class="content-wrapper">
-
       <section class="catalog">
         <h2 class="visually-hidden">Товары магазина</h2>
 
         <ul class="catalog__list">
-
           <li class="catalog__item catalog-item">
-            <a class="catalog-item__image-link" href="#">
+            <a href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)"
                   srcset="img/webp/photo-hare-desktop@1x.webp 1x, img/webp/photo-hare-desktop@2x.webp 2x">
@@ -121,7 +117,7 @@
           </li>
 
           <li class="catalog__item catalog-item">
-            <a class="catalog-item__image-link" href="#">
+            <a href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)"
                   srcset="img/webp/photo-bowl-desktop@1x.webp 1x, img/webp/photo-bowl-desktop@2x.webp 2x">
@@ -159,13 +155,14 @@
           </li>
 
           <li class="catalog__item catalog-item">
-            <a class="catalog-item__image-link" href="#">
+            <a href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)"
                   srcset="img/webp/photo-toys-desktop@1x.webp 1x, img/webp/photo-toys-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/webp/photo-toys-tablet@1x.webp 1x, img/webp/photo-toys-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/webp/photo-toys-mobile@1x.webp 1x, img/webp/photo-toys-mobile@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/webp/photo-toys-mobile@1x.webp 1x, img/webp/photo-toys-mobile@2x.webp 2x">
                 <source media="(min-width: 1150px)"
                   srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -223,21 +220,21 @@
       </a>
 
       <ul class="page-footer__social social-list">
-        <li class="social-list__item social-list__item--instagram">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="instagram">
             <svg class="social-list__icon" width="23" height="23">
               <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
           </a>
         </li>
-        <li class="social-list__item social-list__item--facebook">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="facebook">
             <svg class="social-list__icon" width="15" height="30">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
-        <li class="social-list__item social-list__item--twitter">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="twitter">
             <svg class="social-list__icon" width="23" height="20">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
@@ -265,22 +262,15 @@
           <legend class="modal__legend">Выберите размер:</legend>
 
           <div class="modal__size-wrapper">
-
             <input class="modal__input visually-hidden" type="radio" name="size" id="size-s" value="size-s" checked="">
             <label class="modal__label" for="size-s">s</label>
-
-
             <input class="modal__input visually-hidden" type="radio" name="size" id="size-m" value="size-m">
             <label class="modal__label" for="size-m">m</label>
-
-
             <input class="modal__input visually-hidden" type="radio" name="size" id="size-l" value="size-l">
             <label class="modal__label" for="size-l">l</label>
           </div>
         </fieldset>
-
         <button class="button modal__button" type="submit">Добавить</button>
-
       </form>
     </div>
   </section>
