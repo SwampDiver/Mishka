@@ -11,7 +11,7 @@
 }
 
 .page-footer__social {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 
   border-bottom: 1px solid #e5e5e5;
 
@@ -51,9 +51,7 @@
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    // align-content: center;
-
-    padding: 50px;
+    padding: 60px 50px 50px;
   }
 
   .page-footer__link-logo {
@@ -77,20 +75,14 @@
     margin: 0;
   }
 
-  // .page-footer__developed-by-link {
-
-  //   padding: 10px 55px 10px 30px;
-  // }
-
-
 }
 
 @media (min-width: $desktop) {
 
   .page-footer__wrapper {
-    width: 1250px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 50px 100px;
+    padding: 50px;
   }
 
 }

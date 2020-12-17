@@ -32,14 +32,10 @@
 .main-nav__link-logo {
   display: block;
 
-  margin: 17px 0;
-  width: 87px;
-  height: 35px;
+  margin: 8px auto;
+  width: 89px;
+  // height: 35px;
 }
-
-// .main-nav__image-logo {
-//   display: block;
-// }
 
 .main-nav__toggle {
   position: absolute;
@@ -103,12 +99,14 @@
   .main-nav__logo-wrapper {
     justify-content: start;
     flex-grow: 1;
-    min-width: 240px;
+    min-width: 300px;
 
-    padding: 0 120px 0 50px;
+    padding: 12px 120px 0 50px;
   }
 
   .main-nav__link-logo {
+    margin: 0;
+    padding: 8px 20px 20px 0;
     width: 111px;
     height: 48px;
   }
@@ -123,14 +121,10 @@
   }
 
   .main-nav__site-list {
+    padding-left: 50px;
     display: flex;
     flex-grow: 1;
-
     order: 1;
-    min-width: 400px;
-    border-top: 1px solid #e7e7e7;
-
-    font-size: 15px;
   }
 
   .main-nav__user-list {
@@ -232,6 +226,7 @@
   .main-nav__stock-list {
     order: 3;
     flex-grow: 1;
+    padding-left: 50px;
 
     border-top: 1px solid $grey-light;
   }

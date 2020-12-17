@@ -11,7 +11,7 @@
 .banner-nav__link {
   position: relative;
   display: block;
-  padding: 30px;
+  padding: 28px 30px;
 
   &::before {
     content: "";
@@ -124,10 +124,15 @@
   }
 
   .banner-nav__link {
-    padding: 34px 150px 34px 34px;
+    padding: 28px 150px 28px 34px;
   }
 
+  .banner-nav__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
+
 
 @media (min-width: $desktop) {
   .banner-nav {

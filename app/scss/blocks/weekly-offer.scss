@@ -1,8 +1,7 @@
 .weekly-offer {
   position: relative;
 
-  margin-bottom: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 
   &::after {
     position: absolute;
@@ -13,7 +12,7 @@
     height: 25px;
 
     left: 0;
-    bottom: -43px;
+    bottom: -52px;
 
     background-image: url(../img/bg-zigzag-line.svg);
     background-size: 320px 20px;
@@ -23,12 +22,12 @@
 .weekly-offer__titles {
   display: flex;
   flex-direction: column;
-
+  padding: 29px 0 30px;
 }
 
 .weekly-offer__title {
   order: 1;
-  margin: 0 0 30px 0;
+  margin: 0 ;
 
   color: $aqua-light;
   font-size: 17px;
@@ -36,12 +35,9 @@
   text-transform: uppercase;
 }
 
-.weekly-offer__subtitle {
-  margin: 30px 0 10px;
-}
 
 .weekly-offer__description {
-  margin: 0 0 20px;
+  margin: 0 0 17px;
   color: $grey-dark;
 
   font-size: 15px;
@@ -58,12 +54,12 @@
 }
 
 .weekly-offer__cell {
-  padding: 10px 10px 8px 0;
+  padding: 10px 23px 8px 0;
   border-bottom: 1px solid #ececec;
 }
 
 .weekly-offer__image-wrapper {
-  margin: 0 auto;
+  margin: 0 auto 20px;
   width: 260px;
   height: auto;
   background-color: $grey-background;
@@ -84,12 +80,12 @@
 
 @media (min-width: $tablet) {
   .weekly-offer {
-
+    padding-bottom: 115px;
     &::after {
 
       height: 34px;
 
-      bottom: -43px;
+      bottom: 38px;
 
       background-size: 768px 28px;
     }
@@ -98,18 +94,17 @@
   .weekly-offer__titles {
     flex-direction: row;
     justify-content: space-between;
+    padding: 47px 0 0 0;
+    margin-bottom: 50px;
   }
 
   .weekly-offer__title {
-    margin: 50px 0;
+    padding-top: 12px;
     max-width: 127px;
     line-height: 17px;
     text-align: center;
   }
 
-  .weekly-offer__subtitle {
-    margin: 40px 0;
-  }
 
   .weekly-offer__wrapper {
     position: relative;
@@ -120,11 +115,14 @@
 
   .weekly-offer__description {
     min-height: 72px;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .weekly-offer__options {
-    padding-bottom: 25px;
+    margin-bottom: 58px;
   }
 
   .weekly-offer__image-wrapper {
@@ -142,6 +140,7 @@
 
   .weekly-offer__price {
     margin-bottom: 35px;
+    font-size: 20px;
   }
 
 }
