@@ -102,7 +102,7 @@
         <p class="weekly-offer__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и
           трех размерах.</p>
         <table class="weekly-offer__options">
-          <tr class="weekly-offer__row">
+          <tr>
             <td class="weekly-offer__cell">
               Цвет:
             </td>
@@ -110,7 +110,7 @@
               «Тиффани»/серый
             </td>
           </tr>
-          <tr class="weekly-offer__row">
+          <tr>
             <td class="weekly-offer__cell">
               Диаметр:
             </td>
@@ -118,7 +118,7 @@
               25 см
             </td>
           </tr>
-          <tr class="weekly-offer__row">
+          <tr>
             <td class="weekly-offer__cell">
               Высота:
             </td>
@@ -165,32 +165,32 @@
     <section class="reviews content-wrapper">
       <div class="reviews__wrapper">
         <h2 class="reviews__title section-title">Отзывы</h2>
-          <blockquote class="reviews__item reviews__item--active">
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
-              лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои
-              фотографии
-              сразу стали более стильными, а также набирают больше лайков!</p>
-            <cite class="reviews__author"><b class="reviews__name">Анастасия Красильникова</b><br>@misssssiskras</cite>
-          </blockquote>
+        <blockquote class="reviews__item reviews__item--active">
+          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+            лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои
+            фотографии
+            сразу стали более стильными, а также набирают больше лайков!</p>
+          <cite class="reviews__author"><b class="reviews__name">Анастасия Красильникова</b><br>@misssssiskras</cite>
+        </blockquote>
 
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Зайчик превзошел все ожидания от увиденного на фотографии! В нем все идеально. Со
-              вкусом подобранны цвета пряжи. Связан ровно и аккуратно.</p>
-            <cite class="reviews__author"><b class="reviews__name">Ирина</b><br>@irina_90</cite>
-          </blockquote>
+        <blockquote class="reviews__item">
+          <p class="reviews__text">Зайчик превзошел все ожидания от увиденного на фотографии! В нем все идеально. Со
+            вкусом подобранны цвета пряжи. Связан ровно и аккуратно.</p>
+          <cite class="reviews__author"><b class="reviews__name">Ирина</b><br>@irina_90</cite>
+        </blockquote>
 
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Качественная вещь, неповторимый стиль, чудесная теплая игрушка. Процесс покупки
-              оказался очень прост и удобен.</p>
-            <cite class="reviews__author"><b class="reviews__name">Татьяна Морозова</b><br>@tanyamorozova</cite>
-          </blockquote>
-        </div>
+        <blockquote class="reviews__item">
+          <p class="reviews__text">Качественная вещь, неповторимый стиль, чудесная теплая игрушка. Процесс покупки
+            оказался очень прост и удобен.</p>
+          <cite class="reviews__author"><b class="reviews__name">Татьяна Морозова</b><br>@tanyamorozova</cite>
+        </blockquote>
+      </div>
 
-        <div class="reviews__navigation">
-          <button class="reviews__button reviews__button--back" type="button" aria-label="Предыдущий отзыв"></button>
-          <button class="reviews__button reviews__button--forward" type="button" aria-label="Следующий отзыв"></button>
-        </div>
-        <a class="reviews__feedback button" href="#">Написать</a>
+      <div class="reviews__navigation">
+        <button class="reviews__button reviews__button--back" type="button" aria-label="Предыдущий отзыв"></button>
+        <button class="reviews__button reviews__button--forward" type="button" aria-label="Следующий отзыв"></button>
+      </div>
+      <a class="reviews__feedback button" href="#">Написать</a>
       </div>
     </section>
 
@@ -219,14 +219,19 @@
             srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x" loading="lazy">
           <source type="image/webp" media="(min-width: 768px)"
             srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x" loading="lazy">
-          <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x" loading="lazy">
-          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" loading="lazy">
+          <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x"
+            loading="lazy">
+          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x"
+            loading="lazy">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" loading="lazy">
           <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
             alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" loading="lazy">
         </picture>
         <div class="map__interactive">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d999.3056320543757!2d30.323070277454384!3d59.938592423338264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1608124227456!5m2!1sru!2sru" title=" г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" width="100%" height="457" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d999.3056320543757!2d30.323070277454384!3d59.938592423338264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1608124227456!5m2!1sru!2sru"
+            title=" г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" width="100%" height="457"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
 
       </div>
@@ -239,29 +244,27 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__link-logo" href="#" aria-label="интернет-магазин Mishka">
-        <!-- ALT TEXT??-->
-
         <svg class="page-footer__icon-logo" width="103" height="35">
           <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
         </svg>
       </a>
 
       <ul class="page-footer__social social-list">
-        <li class="social-list__item social-list__item--instagram">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="instagram">
             <svg class="social-list__icon" width="23" height="23">
               <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
           </a>
         </li>
-        <li class="social-list__item social-list__item--facebook">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="facebook">
             <svg class="social-list__icon" width="15" height="30">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
-        <li class="social-list__item social-list__item--twitter">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="twitter">
             <svg class="social-list__icon" width="23" height="20">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
@@ -289,28 +292,19 @@
           <legend class="modal__legend">Выберите размер:</legend>
 
           <div class="modal__size-wrapper">
-
             <input class="modal__input visually-hidden" type="radio" name="size" id="size-s" value="size-s" checked>
             <label class="modal__label" for="size-s">s</label>
-
-
             <input class="modal__input visually-hidden" type="radio" name="size" id="size-m" value="size-m">
             <label class="modal__label" for="size-m">m</label>
-
-
             <input class="modal__input visually-hidden" type="radio" name="size" id="size-l" value="size-l">
             <label class="modal__label" for="size-l">l</label>
           </div>
         </fieldset>
-
         <button class="button modal__button" type="submit">Добавить</button>
-
       </form>
     </div>
   </section>
-
   <script src="js/main.min.js"></script>
-
 </body>
 
 </html>

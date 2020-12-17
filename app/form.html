@@ -14,7 +14,6 @@
 <body>
   <header class="page-header page-header--form">
     <nav class="main-nav main-nav--no-js">
-      <!-- main-nav--closed main-nav--no-js-->
       <div class="main-nav__logo-wrapper">
         <a class="main-nav__link-logo" href="index.html">
           <picture>
@@ -38,8 +37,8 @@
 
       <ul class="main-nav__user-list user-nav">
         <li class="user-nav__item">
-          <a class="user-nav__link user-nav__link--search" href="#" >
-            <svg class="user-nav__icon user-nav__icon--search"  role="img" width="19" height="19">
+          <a class="user-nav__link user-nav__link--search" href="#">
+            <svg class="user-nav__icon user-nav__icon--search" role="img" width="19" height="19">
               <title>Поиск по сайту</title>
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
@@ -88,7 +87,8 @@
         </legend>
 
         <div class="order__content-wrapper order__content-wrapper--radio">
-          <input class="order__input--radio visually-hidden" type="radio" name="type" id="interior" value="interior" checked="">
+          <input class="order__input--radio visually-hidden" type="radio" name="type" id="interior" value="interior"
+            checked="">
           <label class="order__lable order__lable--radio" for="interior">Аксессуар для интерьера</label>
 
           <input class="order__input--radio visually-hidden" type="radio" name="type" id="toys" value="toys">
@@ -98,34 +98,31 @@
 
       <div class="order__block-wrapper">
 
-        <fieldset class="order__fieldset order__fieldset--color content-wrapper">
+        <fieldset class="order__fieldset content-wrapper">
           <legend class="order__legend">
             <span class="order__legend-text">Цвет</span>
           </legend>
 
           <div class="order__content-wrapper order__content-wrapper--checkbox">
-            <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-white" id="white" checked="">
+            <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-white" id="white"
+              checked="">
             <label class="order__lable order__lable--checkbox" for="white">Белый</label>
-
-            <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-grey" id="grey" checked="">
+            <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-grey" id="grey"
+              checked="">
             <label class="order__lable order__lable--checkbox" for="grey">Серый</label>
-
             <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-tiffany" id="tiffany">
             <label class="order__lable order__lable--checkbox" for="tiffany">«Тиффани»</label>
-
             <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-black" id="black">
             <label class="order__lable order__lable--checkbox" for="black">Черный</label>
-
             <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-pink" id="pink">
             <label class="order__lable order__lable--checkbox" for="pink">Розовый</label>
-
             <input class="order__input--checkbox visually-hidden" type="checkbox" name="color-orange" id="orange">
             <label class="order__lable order__lable--checkbox" for="orange">Оранжевый</label>
           </div>
         </fieldset>
       </div>
 
-      <fieldset class="order__fieldset order__fieldset--name content-wrapper">
+      <fieldset class="order__fieldset content-wrapper">
         <legend class="order__legend">
           <span class="order__legend-text">ФИО</span>
         </legend>
@@ -143,7 +140,8 @@
 
           <p class="order__input-wrapper">
             <label class="order__lable order__lable--text" for="patronymic">Отчество:</label>
-            <input class="order__text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+            <input class="order__text" type="text" name="patronymic" id="patronymic"
+              placeholder="Отчество, если желаете">
           </p>
         </div>
 
@@ -157,11 +155,12 @@
 
           <div class="order__content-wrapper">
             <label class="visually-hidden" for="phone">Телефон</label>
-            <input class="order__text order__text--phone" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*">
+            <input class="order__text order__text--phone" type="tel" name="phone" id="phone"
+              placeholder="+7 ХХХ ХХ ХХ*">
 
-              <svg class="order__input-icon order__input-icon--phone" width="25" height="24">
-                <use xlink:href="img/sprite.svg#icon-phone"></use>
-              </svg>
+            <svg class="order__input-icon order__input-icon--phone" width="25" height="24">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
           </div>
         </fieldset>
 
@@ -181,13 +180,14 @@
         </fieldset>
       </div>
 
-      <fieldset class="order__fieldset order__fieldset--message content-wrapper">
+      <fieldset class="order__fieldset content-wrapper">
         <legend class="order__legend order__legend--message">
           <span class="order__legend-text">Доп</span>
         </legend>
 
         <div class="order__content-wrapper">
-          <textarea class="order__message" name="message" id="message" placeholder="Опишите все ваши пожелания к заказу" aria-label="Пожелания к заказу"></textarea>
+          <textarea class="order__message" name="message" id="message" placeholder="Опишите все ваши пожелания к заказу"
+            aria-label="Пожелания к заказу"></textarea>
         </div>
       </fieldset>
 
@@ -196,35 +196,32 @@
         <button class="order__button button" type="submit">Отправить заказ</button>
       </div>
     </form>
-
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__link-logo" href="#" aria-label="интернет-магазин Mishka">
-        <!-- ALT TEXT??-->
-
         <svg class="page-footer__icon-logo" width="103" height="35">
           <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
         </svg>
       </a>
 
       <ul class="page-footer__social social-list">
-        <li class="social-list__item social-list__item--instagram">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="instagram">
             <svg class="social-list__icon" width="23" height="23">
               <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
           </a>
         </li>
-        <li class="social-list__item social-list__item--facebook">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="facebook">
             <svg class="social-list__icon" width="15" height="30">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
-        <li class="social-list__item social-list__item--twitter">
+        <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="twitter">
             <svg class="social-list__icon" width="23" height="20">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
