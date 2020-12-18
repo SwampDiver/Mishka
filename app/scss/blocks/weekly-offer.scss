@@ -125,6 +125,10 @@
     margin-bottom: 58px;
   }
 
+  .weekly-offer__cell {
+    padding: 9px 0 7px 0;
+  }
+
   .weekly-offer__image-wrapper {
     position: absolute;
 
@@ -147,7 +151,7 @@
 
 @media (min-width: $desktop) {
   .weekly-offer {
-
+padding-bottom: 148px;
     &::after {
      left: 50px;
      right: 50px;
@@ -155,7 +159,7 @@
 
       height: 30px;
 
-      bottom: -43px;
+      bottom: 52px;
 
       background-size: 1050px 28px;
     }
@@ -163,35 +167,32 @@
 
   .weekly-offer__titles {
     justify-content: start;
+    margin-bottom: 45px;
+    padding: 60px 0 0 0;
   }
 
   .weekly-offer__title {
     order: 0;
-    padding: 20px 25px;
+    padding: 15px 25px;
     min-width: 171px;
 
   }
 
-  .weekly-offer__subtitle {
-    margin: 55px 0;
-    padding: 0;
-  }
-
-  .weekly-offer__wrapper {
+    .weekly-offer__wrapper {
     padding: 0 590px 0 175px;
   }
 
   .weekly-offer__description {
-    margin-bottom: 65px;
+    margin-bottom: 45px;
     font-size: 17px;
   }
 
   .weekly-offer__options {
-    margin-bottom: 90px;
+    margin-bottom: 110px;
   }
 
   .weekly-offer__image-wrapper {
-    top: -140px;
+    top: -162px;
 
     z-index: -1;
 

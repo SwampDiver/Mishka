@@ -63,7 +63,7 @@
 @media (min-width: $tablet) {
 
   .adventages {
-   padding-bottom: 35px;
+   padding-bottom: 30px;
   }
   .adventages__title {
     padding-bottom: 43px;
@@ -109,8 +109,8 @@
 
 @media (min-width: $desktop) {
   .adventages {
-    margin-bottom: 90px;
-    padding-left: 225px;
+    
+    padding: 0 225px 30px;
   }
 
   .adventages__list {

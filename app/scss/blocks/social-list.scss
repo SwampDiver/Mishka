@@ -23,8 +23,9 @@
   }
 }
 
-// @media (min-width: $tablet) {
-//   .social-list {
-//     padding-left: 50px;
-//   }
-// }
+@media (min-width: $desktop) {
+ .social-list__item {
+  margin: 7px 7px 0 0;
+
+}
+}

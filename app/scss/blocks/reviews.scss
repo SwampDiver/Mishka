@@ -52,6 +52,8 @@
     opacity: 1;
     animation: appearance 0.5s;
   }
+
+  
 }
 
 .reviews__text {
@@ -191,7 +193,7 @@
 
       height: 30px;
 
-      bottom: -15px;
+      bottom: -90px;
 
       background-size: 1050px 28px;
     }
@@ -201,8 +203,17 @@
     padding-left: 175px;
 
   }
-
-  .reviews__item {
+.reviews__item {
     padding-right: 100px;
   }
+
+
+  .reviews__text {
+    padding-bottom: 15px;
+  }
+
+.reviews__navigation {
+  top: 315px;
+}
+
 }

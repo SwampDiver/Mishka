@@ -34,7 +34,7 @@
 
   margin: 8px auto;
   width: 89px;
-  // height: 35px;
+
 }
 
 .main-nav__toggle {
@@ -55,6 +55,7 @@
 
   background-size: 22px 22px;
   background-repeat: no-repeat;
+
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -164,7 +165,7 @@
     flex-grow: 1;
     padding: 0;
 
-    min-width: 188px;
+    min-width: 180px;
   }
 
   .main-nav__link-logo {
@@ -226,7 +227,7 @@
   .main-nav__stock-list {
     order: 3;
     flex-grow: 1;
-    padding-left: 50px;
+
 
     border-top: 1px solid $grey-light;
   }
@@ -234,6 +235,7 @@
   .main-nav__text {
     order: 4;
     flex-grow: 1;
+    padding-top: 17px;
 
     text-align: right;
 
