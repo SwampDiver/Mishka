@@ -35,6 +35,9 @@
 @media (min-width: $desktop) {
   .site-nav {
     width: 450px;
+    padding: 0;
+    border: none;
+    font-size: 17px;
   }
 
   .site-nav__item {

@@ -47,9 +47,7 @@
     position: static;
   }
 
-  // .user-nav__icon--cart {
-  //   left: 10px;
-  // }
+
   .user-nav__search-text {
     display: none;
   }
@@ -60,5 +58,6 @@
   .user-nav {
     align-items:stretch;
     width: 450px;
+    font-size: 17px;
   }
 }

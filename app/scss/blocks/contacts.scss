@@ -128,7 +128,7 @@
     position: relative;
 
     margin: 0 auto;
-    padding: 20px 50px 105px 225px;
+    padding: 72px 50px 105px 225px;
 
 
     max-width: 1150px;
@@ -142,14 +142,15 @@
 
     &::after {
 
-      top: -18px;
+      top: -5px;
       left: -110px;
     }
   }
 
   .contacts__info {
     display: block;
-    margin: 0 0 85px 0;
+    margin: 0;
+    padding-bottom: 75px;
 
     max-width: 300px;
   }
