@@ -19,6 +19,8 @@
   margin: 0;
   padding: 20px 20px 20px 90px;
 
+  font-size: 17px;
+
   &::before {
     position: absolute;
     content: "";
@@ -91,8 +93,12 @@
 
 .production__description-wrapper {
   margin: 0 auto;
-  padding: 35px 0;
+  padding: 34px;
   max-width: 260px;
+}
+.production__text {
+  margin: 0;
+  padding-bottom: 21px;
 }
 
 @media (min-width: $tablet) {
@@ -102,7 +108,8 @@
   }
 
   .production__title {
-    padding: 35px 20px 35px 105px;
+    font-size: 20px;
+    padding: 40px 20px 35px 105px;
 
    &::before {
      left: 40px;
@@ -135,7 +142,7 @@
 
   .production__text {
     margin: 0;
-    padding-bottom: 45px;
+    padding-bottom: 33px;
 
     font-size: 15px;
     line-height: 30px;
@@ -148,15 +155,15 @@
 
 @media (min-width: $desktop) {
   .production {
-    margin-bottom: 105px;
-    padding-left: 682px;
+    margin: 0;
+    padding: 0 0 120px 682px;
   }
 
   .production__title {
-    padding: 100px 65px 43px 77px;
+    padding: 90px 65px 33px 77px;
 
     &::before {
-      top: 66px;
+      top: 53px;
       left: 77px;
     }
 
@@ -183,6 +190,10 @@
   .production__description-wrapper {
     padding: 0 65px 45px 77px;
 
+  }
+
+  .production__text {
+    padding-bottom: 46px;
   }
 
 }

@@ -1,17 +1,26 @@
 .catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-   justify-content: space-between;
+  display: grid;
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .catalog__item {
   margin: 0 auto 30px;
 }
 
+@media (min-width: $tablet) {
+  .catalog__list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 @media (min-width: $desktop) {
   .catalog__list {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
   }
 
   .catalog__item {

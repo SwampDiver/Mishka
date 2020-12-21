@@ -1,6 +1,6 @@
 .page-main__header {
-  margin-bottom: 30px;
-  padding: 75px 0;
+  margin-bottom: 39px;
+  padding: 68px 0;
 
   background-color: $grey-background;
 }
@@ -14,7 +14,8 @@
 @media (min-width: $tablet) {
   .page-main__header {
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
+    padding: 30px 0 85px 0;
 
     &::after {
       position: absolute;
@@ -40,7 +41,8 @@
 
 @media (min-width: $desktop) {
   .page-main__header {
-    margin-bottom: 140px;
+    padding-bottom: 112px;
+    margin-bottom: 120px;
 
     &::after {
 
