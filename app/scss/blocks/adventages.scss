@@ -70,9 +70,11 @@
   }
 
   .adventages__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .adventages__item {
@@ -109,7 +111,7 @@
 
 @media (min-width: $desktop) {
   .adventages {
-    
+
     padding: 0 225px 30px;
   }
 

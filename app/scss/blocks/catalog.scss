@@ -1,7 +1,7 @@
 .catalog__list {
   display: flex;
   flex-wrap: wrap;
- justify-content: space-between;
+   justify-content: space-between;
 }
 
 .catalog__item {
@@ -9,6 +9,11 @@
 }
 
 @media (min-width: $desktop) {
+  .catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .catalog__item {
     margin: 0 0 57px 0;
 
