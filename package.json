@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",
+    "browserslist": "^4.16.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -24,5 +25,8 @@
   },
   "dependencies": {
     "save-dev": "0.0.1-security"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
