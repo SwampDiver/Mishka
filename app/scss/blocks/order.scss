@@ -1,5 +1,5 @@
 .order {
-  margin-bottom: 56px;
+  margin-bottom: 60px;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
@@ -17,8 +17,14 @@
   position: relative;
 
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 0 30px;
   border: 0;
+
+  &--phone,
+  &--email {
+    padding-top: 14px;
+    padding-bottom: 8px;
+  }
 }
 
 .order__legend {
@@ -51,14 +57,37 @@
   flex-wrap: wrap;
 
   margin: 0 auto;
+
+  &--radio {
+    margin-bottom: 35px;
+    padding-top: 5px;
+  }
+  &--checkbox {
+    margin-bottom: 30px;
+    padding-top: 6px;
+  }
+  &--name {
+    margin-bottom: 30px;
+    padding-top: 28px;
+  }
+  &--message {
+    margin-bottom: 19px;
+    padding-top: 24px;
+  }
 }
 
 .order__lable {
   position: relative;
   display: block;
-
-  padding: 25px 25px 25px 60px;
   min-width: 260px;
+
+  &--radio {
+    padding: 19px 25px 14px 60px;
+  }
+
+  &--checkbox {
+    padding: 23px 25px 19px 60px;
+  }
 
   &::before {
     content: "";
@@ -121,7 +150,7 @@
     display: none;
 
     left: 10px;
-    top: 27px;
+    top: 23px;
 
     width: 22px;
     height: 16px;
@@ -141,8 +170,6 @@
   border-color: $aqua-form;
 }
 
-
-
 .order__lable--text {
   padding: 0 10px 0 0;
 
@@ -152,8 +179,7 @@
 }
 
 .order__text {
-
-  padding: 15px 0;
+  padding: 15px 45px 0 0;
   width: 100%;
   max-width: 360px;
 
@@ -191,9 +217,13 @@
 .order__input-wrapper {
   display: flex;
   flex-direction: column;
+  margin: 0;
   width: 100%;
   max-width: 360px;
-  //----------------------------
+
+  &:not(:last-child) {
+    padding-bottom: 22px;
+  }
 }
 
 .order__input-icon {
@@ -243,9 +273,12 @@
 
 
 @media (min-width: $tablet) {
+  .order {
+    margin-bottom: 50px;
+  }
 
   .order__description {
-
+    margin-bottom: 0;
     font-size: 17px;
     line-height: 30px;
   }
@@ -258,40 +291,57 @@
     padding: 40px 50px;
 
     &--phone {
+      padding-top: 48px;
       padding-bottom: 0;
     }
 
     &--email {
-      padding-top: 25px;
+      padding-top: 5px;
     }
   }
 
   .order__legend {
     position: absolute;
-    top: 70px;
+    top: 62px;
     width: 100px;
 
-    &--email {
-      top: 60px
+    &--tel {
+      top: 77px;
     }
+
+    &--email {
+      top: 23px;
+    }
+
   }
 
   .order__legend-text {
-
     &::after {
       display: none;
     }
   }
 
   .order__content-wrapper {
+    margin-bottom: 0;
+    padding-top: 0;
     max-width: 990px;
 
     padding-left: 167px;
+
+    &--checkbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 13px;
+    }
+
+    &--name {
+      padding-top: 13px;
+    }
   }
 
   .order__lable {
-    min-width: 240px;
-    padding: 32px 25px 32px 60px;
+    min-width: 250px;
+    padding: 27px 25px 30px 80px;
 
     font-size: 19px;
 
@@ -332,15 +382,16 @@
   .order__input-wrapper {
     flex-direction: row;
     align-items: center;
-
-    margin: 10px 0;
-    padding-bottom: 10px;
     max-width: none;
+
+    &:not(:last-child) {
+      padding-bottom: 26px;
+    }
   }
 
   .order__lable--text {
     display: block;
-    margin-right: 23px;
+    margin-right: 36px;
     padding: 0;
     min-width: 53px;
 
@@ -350,7 +401,7 @@
   .order__text {
     flex-grow: 1;
 
-    padding: 20px 13px;
+    padding: 20px 60px 20px 20px;
     max-width: none;
 
     &--phone,
@@ -382,6 +433,8 @@
 
   .order__button {
     margin: 0;
+    width: auto;
+    min-width: 230px;
   }
 }
 
@@ -393,27 +446,27 @@
   }
 
   .order__fieldset {
-    padding: 60px 50px;
+    padding: 33px 50px;
 
     &--phone {
-      padding: 25px 50px 10px 50px;
+      padding: 37px 50px 0 50px;
     }
 
     &--email {
-      padding: 10px 50px 25px 50px;
+      padding: 0 50px 20px 50px;
     }
   }
 
   .order__legend {
-    top: 93px;
+    top: 67px;
     left: 113px;
 
     &--tel {
-      top: 54px;
+      top: 63px;
     }
 
     &--email {
-      top: 41px;
+      top: 27px;
     }
 
     &--message {
@@ -426,15 +479,23 @@
     max-width: 700px;
 
     &--checkbox {
-      justify-content: space-between;
+      grid-template-columns: 1fr 1fr 1fr;
       padding-left: 75px;
       max-width: 850px;
+    }
+
+    &--name {
+      padding: 19px 0;
+    }
+
+    &--message {
+      padding: 23px 0;
     }
   }
 
   .order__lable {
     min-width: 240px;
-    padding: 32px 25px 32px 80px;
+    padding: 31px 25px 32px 80px;
 
     &--radio {
       min-width: 360px;
