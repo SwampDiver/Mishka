@@ -1,6 +1,5 @@
 .weekly-offer {
   position: relative;
-
   padding-bottom: 62px;
 
   &::after {
@@ -27,7 +26,7 @@
 
 .weekly-offer__title {
   order: 1;
-  margin: 0 ;
+  margin: 0;
 
   color: $aqua-light;
   font-size: 17px;
@@ -81,6 +80,7 @@
 @media (min-width: $tablet) {
   .weekly-offer {
     padding-bottom: 115px;
+
     &::after {
 
       height: 34px;
@@ -105,11 +105,8 @@
     text-align: center;
   }
 
-
   .weekly-offer__wrapper {
     position: relative;
-
-
     padding-right: 380px;
   }
 
@@ -146,21 +143,18 @@
     margin-bottom: 35px;
     font-size: 20px;
   }
-
 }
 
 @media (min-width: $desktop) {
   .weekly-offer {
-padding-bottom: 148px;
+    padding-bottom: 148px;
+
     &::after {
-     left: 50px;
-     right: 50px;
-     width: 1050px;
-
+      left: 50px;
+      right: 50px;
+      width: 1050px;
       height: 30px;
-
       bottom: 52px;
-
       background-size: 1050px 28px;
     }
   }
@@ -175,10 +169,9 @@ padding-bottom: 148px;
     order: 0;
     padding: 15px 25px;
     min-width: 171px;
-
   }
 
-    .weekly-offer__wrapper {
+  .weekly-offer__wrapper {
     padding: 0 590px 0 175px;
   }
 
@@ -193,9 +186,7 @@ padding-bottom: 148px;
 
   .weekly-offer__image-wrapper {
     top: -162px;
-
     z-index: -1;
-
     width: 525px;
   }
 

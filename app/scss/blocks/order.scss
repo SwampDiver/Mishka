@@ -40,7 +40,6 @@
   display: flex;
   align-items: center;
 
-
   &::after {
     content: "";
     flex-grow: 1;
@@ -211,7 +210,6 @@
     fill: $aqua-light;
     opacity: 1;
   }
-
 }
 
 .order__input-wrapper {
@@ -232,8 +230,6 @@
   right: 5px;
   opacity: 0.2;
 }
-
-
 
 .order__message {
   display: block;
@@ -268,9 +264,6 @@
 .order__button {
   line-height: 16px;
 }
-
-
-
 
 @media (min-width: $tablet) {
   .order {
@@ -312,7 +305,6 @@
     &--email {
       top: 23px;
     }
-
   }
 
   .order__legend-text {
@@ -376,7 +368,6 @@
 
       background-size: 33px, 23px;
     }
-
   }
 
   .order__input-wrapper {
@@ -412,7 +403,6 @@
   }
 
   .order__input-icon {
-
     top: 20px;
     right: 25px;
   }
@@ -508,8 +498,6 @@
   }
 
   .order__input-icon {
-
-
     right: 0;
   }
 

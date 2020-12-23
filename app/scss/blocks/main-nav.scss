@@ -16,16 +16,13 @@
     &:active {
       opacity: 0.3;
     }
-
   }
 }
 
 .main-nav__logo-wrapper {
   position: relative;
-
   display: flex;
   justify-content: center;
-
   background-color: $white;
 }
 
@@ -34,7 +31,6 @@
 
   margin: 14px auto;
   width: 89px;
-
 }
 
 .main-nav__toggle {
@@ -55,7 +51,6 @@
 
   background-size: 22px 22px;
   background-repeat: no-repeat;
-
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -86,8 +81,7 @@
 
   .main-nav--closed .user-nav__item {
     display: none;
-  }
-
+    }
 }
 
 @media (min-width: $tablet) {
@@ -101,7 +95,6 @@
     justify-content: start;
     flex-grow: 1;
     min-width: 300px;
-
     padding: 12px 120px 0 50px;
   }
 
@@ -196,7 +189,6 @@
     }
   }
 
-
   .main-nav__user-list {
     position: relative;
     order: 2;
@@ -218,16 +210,12 @@
     top: 0;
     width: calc(50vw - 400px);
     height: 100%;
-
     background-color: $white;
-
   }
-
 
   .main-nav__stock-list {
     order: 3;
     flex-grow: 1;
-
 
     border-top: 1px solid $grey-light;
   }

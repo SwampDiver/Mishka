@@ -12,9 +12,7 @@
 
 .page-footer__social {
   padding-bottom: 40px;
-
   border-bottom: 1px solid #e5e5e5;
-
 }
 
 .page-footer__developed-by {
@@ -35,6 +33,7 @@
   &:hover .page-footer__developed-by-icon {
     fill: $aqua-dark--hover;
   }
+
   &:active .page-footer__developed-by-icon {
     opacity: 0.3;
   }
@@ -43,7 +42,6 @@
 .page-footer__developed-by-icon {
   margin-left: 28px;
   fill: $aqua-light;
-
 }
 
 
@@ -75,17 +73,12 @@
   .page-footer__developed-by {
     margin: 0;
   }
-
 }
 
 @media (min-width: $desktop) {
-
   .page-footer__wrapper {
     max-width: 1150px;
     margin: 0 auto;
     padding: 50px;
   }
-
-
-
 }
