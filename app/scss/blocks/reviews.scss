@@ -1,7 +1,6 @@
 .reviews {
   position: relative;
 
-
   &::after {
     position: absolute;
 
@@ -15,7 +14,6 @@
 
     background-image: url(../img/bg-zigzag-line.svg);
     background-size: 320px 20px;
-
   }
 }
 
@@ -27,16 +25,18 @@
   0% {
     opacity: 0;
   }
+
   30% {
     opacity: 0.3;
   }
+
   60% {
     opacity: 0.6;
   }
+
   100% {
     opacity: 1;
   }
-
 }
 
 .reviews__title {
@@ -47,13 +47,12 @@
   display: none;
   margin: 0;
   opacity: 0;
+
   &--active {
     display: block;
     opacity: 1;
     animation: appearance 0.5s;
   }
-
-
 }
 
 .reviews__text {
@@ -68,12 +67,10 @@
   font-style: normal;
   font-size: 17px;
   line-height: 30px;
-
 }
 
 .reviews__name {
   color: $black;
-
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -107,6 +104,7 @@
   &:hover {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -147,9 +145,11 @@
     padding-bottom: 100px;
 
   }
+
   .reviews__title {
     padding-bottom: 49px;
   }
+
   .reviews__text {
     padding-bottom: 35px;
     font-size: 17px;
@@ -188,8 +188,8 @@
 
     &::after {
       left: 50px;
-     right: 50px;
-     width: 1050px;
+      right: 50px;
+      width: 1050px;
 
       height: 30px;
 
@@ -198,12 +198,14 @@
       background-size: 1050px 28px;
     }
   }
+
   .reviews__wrapper {
     margin-bottom: 150px;
     padding-left: 175px;
 
   }
-.reviews__item {
+
+  .reviews__item {
     padding-right: 100px;
   }
 
@@ -212,8 +214,8 @@
     padding-bottom: 15px;
   }
 
-.reviews__navigation {
-  top: 315px;
-}
+  .reviews__navigation {
+    top: 315px;
+  }
 
 }

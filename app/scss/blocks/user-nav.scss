@@ -19,11 +19,8 @@
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
-
   opacity: 0.2;
 }
-
-
 
 @media (min-width: $tablet) {
   .user-nav {
@@ -47,16 +44,14 @@
     position: static;
   }
 
-
   .user-nav__search-text {
     display: none;
   }
-
 }
 
 @media (min-width: $desktop) {
   .user-nav {
-    align-items:stretch;
+    align-items: stretch;
     width: 450px;
     font-size: 17px;
   }

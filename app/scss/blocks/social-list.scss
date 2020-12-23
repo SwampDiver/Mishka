@@ -7,7 +7,6 @@
 
 .social-list__item {
   margin: 0 5px 0 1px;
-
 }
 
 .social-list__link {
@@ -18,14 +17,15 @@
   &:hover .social-list__icon {
     fill: $aqua-light;
   }
+
   &:active .social-list__icon {
     opacity: 0.3;
   }
 }
 
 @media (min-width: $desktop) {
- .social-list__item {
-  margin: 7px 7px 0 0;
+  .social-list__item {
+    margin: 7px 7px 0 0;
 
-}
+  }
 }

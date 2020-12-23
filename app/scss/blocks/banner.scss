@@ -20,15 +20,12 @@
   }
 }
 
-
 .banner__title {
   margin-bottom: 122px;
   font-size: 27px;
   line-height: 30px;
-
   text-align: center;
 }
-
 
 @media (min-width: $tablet) {
   .banner {
@@ -73,7 +70,6 @@
 
 @media (min-width: $desktop) {
   .banner {
-
     &::after {
       height: 32px;
       background-size: auto 38px;
@@ -89,7 +85,6 @@
     (min-resolution: $retina-dpi) {
       background-image: url(../img/hero-desktop@2x.jpg);
     }
-
   }
 
   .banner__title {
@@ -97,7 +92,4 @@
     font-size: 53px;
     line-height: 57px;
   }
-
-
 }
-
