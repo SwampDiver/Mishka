@@ -17,6 +17,10 @@ const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const htmlmin = require('gulp-htmlmin');
 const imgCompress  = require('imagemin-jpeg-recompress');
+const ghpages = require('gh-pages');
+
+ghpages.publish('dist', callback);
+
 
 function html() {
   return src('app/*.html')
@@ -114,6 +118,7 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.sprite = sprite;
 exports.webpConvert = webpConvert;
+exports.ghpages = ghpages;
 
 
 exports.build = series(cleanDist, build, html, images)

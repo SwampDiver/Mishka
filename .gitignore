@@ -12,4 +12,3 @@ app/css/*.css
 app/css/*.map
 Thumbs.db
 psd/
-dist/
