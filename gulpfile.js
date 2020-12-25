@@ -17,9 +17,19 @@ const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const htmlmin = require('gulp-htmlmin');
 const imgCompress  = require('imagemin-jpeg-recompress');
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+
+function htmlInclude() {
+  return src("app/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(dest('dist'));
+}
 
 function html() {
-  return src('app/*.html')
+  return src('dist/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist'));
 }
@@ -30,7 +40,7 @@ function sprite() {
     inlineSvg: true
   }))
   .pipe(concat('sprite.svg'))
-  .pipe(dest('app/img'))
+  .pipe(dest('dist/img'))
 }
 
 function webpConvert() {
@@ -116,5 +126,5 @@ exports.sprite = sprite;
 exports.webpConvert = webpConvert;
 
 
-exports.build = series(cleanDist, build, html, images)
+exports.build = series(cleanDist, build, images, sprite, htmlInclude, html)
 exports.default = parallel(styles, scripts, browsersync, watching);

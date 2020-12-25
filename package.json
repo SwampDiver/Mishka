@@ -24,6 +24,8 @@
     "imagemin-jpeg-recompress": "^7.0.0"
   },
   "dependencies": {
+    "gulp-posthtml": "^3.0.5",
+    "posthtml-include": "^1.6.0",
     "save-dev": "0.0.1-security"
   },
   "browserslist": [
