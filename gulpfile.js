@@ -29,7 +29,7 @@ function htmlInclude() {
 }
 
 function html() {
-  return src('dist/*.html')
+  return src('app/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist'));
 }
