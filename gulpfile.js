@@ -21,7 +21,7 @@ const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 
 function htmlInclude() {
-  return src("app/*.html")
+  return src("dist/*.html")
     .pipe(posthtml([
       include()
     ]))
@@ -40,17 +40,17 @@ function sprite() {
     inlineSvg: true
   }))
   .pipe(concat('sprite.svg'))
-  .pipe(dest('dist/img'))
+  .pipe(dest('dist/img'));
 }
 
 function webpConvert() {
   return src('app/img/content/*.{png,jpg}')
   .pipe(webp())
-  .pipe(dest('app/img/webp'))
+  .pipe(dest('app/img/webp'));
 }
 
 function cleanDist() {
-  return del('dist')
+  return del('dist');
 }
 
 function images() {
@@ -76,7 +76,7 @@ function scripts() {
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
+  .pipe(browserSync.stream());
 }
 
 function browsersync() {
@@ -97,7 +97,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 function build() {
@@ -106,7 +106,7 @@ function build() {
     'app/fonts/**/*',
     'app/js/main.min.js'
   ], {base: 'app'})
-  .pipe(dest('dist'))
+  .pipe(dest('dist'));
 }
 
 
@@ -124,7 +124,8 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.sprite = sprite;
 exports.webpConvert = webpConvert;
+exports.htmlInclude = htmlInclude;
 
 
-exports.build = series(cleanDist, build, images, sprite, htmlInclude, html)
+exports.build = series(cleanDist, build, images, sprite, html);
 exports.default = parallel(styles, scripts, browsersync, watching);
