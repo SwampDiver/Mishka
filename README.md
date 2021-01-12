@@ -5,8 +5,8 @@
 ***
 - Adaptive, cross browser, a11y
 - BEM
-- SCSS
-- Mobile First
+- Sass/SCSS
+- Mobile first
 - Flex, grid
 - Gulp
 - SVG-sprite, WebP, retina
