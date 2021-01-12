@@ -1,4 +1,4 @@
-#Mishka - интернет-магазин вязаных изделий ручной работы.
+# **Mishka** - интернет-магазин вязаных изделий ручной работы.
 
 - [Главная](https://swampdiver.github.io/Mishka/)
 - [Каталог](https://swampdiver.github.io/Mishka/catalog.html)
