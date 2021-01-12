@@ -2,7 +2,7 @@
 - [Главная](https://swampdiver.github.io/Mishka/)
 - [Каталог](https://swampdiver.github.io/Mishka/catalog.html)
 - [Форма](https://swampdiver.github.io/Mishka/form.html)
-
+***
 - Adaptive, cross browser, a11y
 - BEM
 - SCSS
