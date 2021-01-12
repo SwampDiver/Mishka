@@ -4,11 +4,11 @@
 - [Каталог](https://swampdiver.github.io/Mishka/catalog.html)
 - [Форма](https://swampdiver.github.io/Mishka/form.html)
 
--Adaptive, cross browser, a11y
--BEM
--SCSS
--Mobile First
--Flex, grid
--Gulp
--SVG-sprite, WebP
--JavaScript: menu(mobile), popup, slider
+- Adaptive, cross browser, a11y
+- BEM
+- SCSS
+- Mobile First
+- Flex, grid
+- Gulp
+- SVG-sprite, WebP
+- JavaScript: menu(mobile), popup, slider
