@@ -1,5 +1,4 @@
 # **Mishka** - интернет-магазин вязаных изделий ручной работы.
-
 - [Главная](https://swampdiver.github.io/Mishka/)
 - [Каталог](https://swampdiver.github.io/Mishka/catalog.html)
 - [Форма](https://swampdiver.github.io/Mishka/form.html)
@@ -10,5 +9,5 @@
 - Mobile First
 - Flex, grid
 - Gulp
-- SVG-sprite, WebP
+- SVG-sprite, WebP, retina
 - JavaScript: menu(mobile), popup, slider
