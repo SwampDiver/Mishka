@@ -1,32 +1,26 @@
 .button {
   display: block;
-  box-sizing: border-box;
+  margin: 0 auto;
+  border: 2px solid $grey-dark;
+  padding: 15px 10px;
   width: 100%;
   max-width: 320px;
-
-  margin: 0 auto;
-  padding: 15px 10px;
-
-  font-size: 17px;
+  box-sizing: border-box;
   font-weight: 700;
+  font-size: 17px;
   line-height: 20px;
-
-
-
-  text-transform: uppercase;
   text-align: center;
-  background-color:  transparent;
-
+  text-transform: uppercase;
   color: $grey-dark;
-  border: 2px solid $grey-dark;
+  background-color: transparent;
 
   &:hover,
   &:focus {
     color: $white;
     background-color: $grey-dark;
   }
+
   &:active {
     color: rgba($white, 0.3);
   }
 }
-

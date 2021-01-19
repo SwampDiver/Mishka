@@ -26,11 +26,11 @@ const popupBtn = document.querySelector(`.modal__button`);
 
 const openPopup = function () {
   popup.classList.add(`modal--opened`);
-}
+};
 
 const closePopup = function () {
   popup.classList.remove(`modal--opened`);
-}
+};
 
 function orderHandler() {
   openPopup();
@@ -72,7 +72,7 @@ const activeSlide = n => {
     slide.classList.remove('reviews__item--active');
   }
   slides[n].classList.add('reviews__item--active');
-}
+};
 
 const nextSlide = () => {
   if (index == slides.length - 1) {
@@ -82,7 +82,7 @@ const nextSlide = () => {
     index++;
     activeSlide(index);
   }
-}
+};
 
 const prevSlide = () => {
   if (index == 0) {
@@ -92,7 +92,7 @@ const prevSlide = () => {
     index--;
     activeSlide(index);
   }
-}
+};
 
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);

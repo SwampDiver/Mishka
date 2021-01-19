@@ -3,19 +3,14 @@
   padding-bottom: 62px;
 
   &::after {
-    position: absolute;
-
     content: "";
-
-    width: 100%;
-    height: 8px;
-
+    position: absolute;
     left: 0;
     bottom: 12px;
-
-    background-image: url(../img/bg-zigzag-line.svg);
+    width: 100%;
+    height: 8px;
+    background-image: url("../img/bg-zigzag-line.svg");
     background-size: 320px 8px;
-
   }
 }
 
@@ -28,34 +23,29 @@
 .weekly-offer__title {
   order: 1;
   margin: 0;
-
-  color: $aqua-light;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
+  color: $aqua-light;
 }
-
 
 .weekly-offer__description {
   margin: 0 0 17px;
-  color: $grey-dark;
-
   font-size: 15px;
+  color: $grey-dark;
 }
 
 .weekly-offer__options {
   margin-bottom: 25px;
   width: 100%;
-
-  color: $grey-dark;
-
   font-size: 15px;
   line-height: 20px;
+  color: $grey-dark;
 }
 
 .weekly-offer__cell {
-  padding: 10px 23px 8px 0;
   border-bottom: 1px solid #ececec;
+  padding: 10px 23px 8px 0;
 }
 
 .weekly-offer__image-wrapper {
@@ -67,27 +57,19 @@
 
 .weekly-offer__price {
   margin: 0 auto 25px;
-
-  text-align: center;
-
-  color: $grey-dark;
-
-  font-size: 17px;
   font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  color: $grey-dark;
 }
-
-
 
 @media (min-width: $tablet) {
   .weekly-offer {
     padding-bottom: 115px;
 
     &::after {
-
-      height: 15px;
-
       bottom: 38px;
-
+      height: 15px;
       background-size: 768px 15px;
     }
   }
@@ -95,8 +77,8 @@
   .weekly-offer__titles {
     flex-direction: row;
     justify-content: space-between;
-    padding: 47px 0 0 0;
     margin-bottom: 50px;
+    padding: 47px 0 0;
   }
 
   .weekly-offer__title {
@@ -112,9 +94,8 @@
   }
 
   .weekly-offer__description {
-    min-height: 72px;
     margin-bottom: 32px;
-
+    min-height: 72px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -124,15 +105,13 @@
   }
 
   .weekly-offer__cell {
-    padding: 9px 0 7px 0;
+    padding: 9px 0 7px;
   }
 
   .weekly-offer__image-wrapper {
     position: absolute;
-
-    top: 5px;
     right: 0;
-
+    top: 5px;
     width: 333px;
   }
 
@@ -153,9 +132,9 @@
     &::after {
       left: 50px;
       right: 50px;
+      bottom: 52px;
       width: 1050px;
       height: 23px;
-      bottom: 52px;
       background-size: 1050px 23px;
     }
   }
@@ -163,7 +142,7 @@
   .weekly-offer__titles {
     justify-content: start;
     margin-bottom: 45px;
-    padding: 60px 0 0 0;
+    padding: 60px 0 0;
   }
 
   .weekly-offer__title {

@@ -21,7 +21,11 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
-    "imagemin-jpeg-recompress": "^7.0.0"
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
   },
   "dependencies": {
     "gulp-posthtml": "^3.0.5",

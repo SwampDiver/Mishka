@@ -1,17 +1,15 @@
 @media (min-width: $tablet) {
+  .page-header {
+    &--index {
+      background-color: #f9f9f9;
+    }
 
-.page-header {
+    &--catalog {
+      background-color: $grey-background;
+    }
 
-  &--index {
-    background-color: #f9f9f9;
+    &--form {
+      background-color: $grey-background;
+    }
   }
-
-  &--catalog {
-    background-color: $grey-background;
-  }
-
-  &--form {
-    background-color: $grey-background;
-  }
-}
 }

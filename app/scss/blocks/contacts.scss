@@ -16,11 +16,9 @@
   display: block;
   margin: 0 auto;
   max-width: 280px;
-
-
-  color: $grey-dark;
   font-size: 15px;
   line-height: 30px;
+  color: $grey-dark;
 }
 
 .contacts__type {
@@ -45,18 +43,18 @@
 }
 
 .contacts__email {
-  padding-bottom: 4px;
   border-bottom: 1px solid $aqua-form;
+  padding-bottom: 4px;
 
   &:hover,
   &:focus {
-    color: $aqua-dark--hover;
     border-color: $aqua-dark--hover;
+    color: $aqua-dark--hover;
   }
 
   &:active {
-    color: rgba($aqua-dark--hover, 0.3);
     border-color: rgba($aqua-dark--hover, 0.3);
+    color: rgba($aqua-dark--hover, 0.3);
   }
 }
 
@@ -75,15 +73,13 @@
     padding-bottom: 50px;
 
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
+      right: 0;
+      top: -18px;
       width: 47px;
       height: 82px;
-
-      top: -18px;
-      right: 0;
-
-      background-image: url(../img/flag.svg);
+      background-image: url("../img/flag.svg");
       background-size: 46px, 81px;
       background-repeat: no-repeat;
     }
@@ -93,7 +89,6 @@
     display: flex;
     justify-content: space-between;
     max-width: 668px;
-
     font-size: 17px;
   }
 
@@ -105,6 +100,7 @@
     margin: 0;
     width: 254px;
   }
+
   .contacts__map {
     padding-bottom: 13px;
   }
@@ -128,10 +124,9 @@
   }
 
   .contacts__title {
-
     &::after {
-      top: -5px;
       left: -110px;
+      top: -5px;
     }
   }
 

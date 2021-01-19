@@ -5,17 +5,16 @@
 
 .map__interactive {
   position: absolute;
-  top: 0;
   right: 0;
-  width: 100%
+  top: 0;
+  width: 100%;
 }
-
 
 @media (min-width: $desktop) {
   .map {
     position: absolute;
-    width: 525px;
-    top: 0;
     right: 50px;
+    top: 0;
+    width: 525px;
   }
 }

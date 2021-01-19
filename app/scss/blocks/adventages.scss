@@ -15,53 +15,48 @@
 
 .adventages__item {
   padding: 61px 7px 23px 0;
-
   width: 260px;
-
+  font-weight: 700;
   font-size: 17px;
   line-height: 20px;
-  font-weight: 700;
-
   background-repeat: no-repeat;
 
-
   &--ecology {
-    background-image: url(../img/feature-flower.svg);
+    background-image: url("../img/feature-flower.svg");
     background-position: 7px 10px;
-
   }
 
   &--style {
-    background-image: url(../img/feature-money.svg);
+    background-image: url("../img/feature-money.svg");
     background-position: -1px 9px;
   }
 
   &--likes {
-    background-image: url(../img/feature-heart.svg);
+    background-image: url("../img/feature-heart.svg");
     background-position: 7px 13px;
   }
 
   &--hendmade {
-    background-image: url(../img/feature-ball.svg);
+    background-image: url("../img/feature-ball.svg");
     background-position: 3px 8px;
   }
 
   &--support {
-    background-image: url(../img/feature-rocket.svg);
+    background-image: url("../img/feature-rocket.svg");
     background-position: 0 10px;
   }
 
   &--packaging {
-    background-image: url(../img/feature-gift.svg);
+    background-image: url("../img/feature-gift.svg");
     background-position: 3px 6px;
   }
 }
 
-
 @media (min-width: $tablet) {
   .adventages {
-   padding-bottom: 30px;
+    padding-bottom: 30px;
   }
+
   .adventages__title {
     padding-bottom: 43px;
   }
@@ -72,13 +67,11 @@
   }
 
   .adventages__item {
+    flex-grow: 1;
     padding: 62px 7px 50px 0;
     width: 307px;
-    flex-grow: 1;
-
     font-size: 20px;
     line-height: 22px;
-
 
     &--style {
       order: 2;
@@ -100,7 +93,6 @@
       order: 5;
     }
   }
-
 }
 
 @media (min-width: $desktop) {

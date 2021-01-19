@@ -13,8 +13,8 @@
 
 @media (min-width: $tablet) {
   .site-nav {
-    min-width: 400px;
     border-top: 1px solid #e7e7e7;
+    min-width: 400px;
     font-size: 15px;
   }
 
@@ -33,9 +33,9 @@
 
 @media (min-width: $desktop) {
   .site-nav {
-    width: 450px;
-    padding: 0;
     border: none;
+    padding: 0;
+    width: 450px;
     font-size: 17px;
   }
 
@@ -43,11 +43,10 @@
     border-bottom: none;
     padding-left: 20px;
 
-
     &:not(:first-child) {
       margin-left: 0;
-      padding-left: 0;
       border-left: 1px solid $grey-light;
+      padding-left: 0;
     }
   }
 
