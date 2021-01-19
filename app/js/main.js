@@ -68,7 +68,7 @@ const slides = document.querySelectorAll('.reviews__item');
 let index = 0;
 
 const activeSlide = n => {
-  for (slide of slides) {
+  for (let slide of slides) {
     slide.classList.remove('reviews__item--active');
   }
   slides[n].classList.add('reviews__item--active');
