@@ -1,12 +1,12 @@
 // Меню
 
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.main-nav'),
+      navToggle = document.querySelector('.main-nav__toggle');
 
 navMain.classList.remove('main-nav--no-js');
 navMain.classList.add('main-nav--closed');
 
-navToggle.addEventListener('click', function () {
+navToggle.addEventListener('click', () => {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
@@ -18,45 +18,38 @@ navToggle.addEventListener('click', function () {
 
 // Модальное окно заказа
 
-const btnOrder = document.querySelector(`.weekly-offer__order`);
-const btnOrders = document.querySelectorAll(`.catalog-item__icon`);
-const popup = document.querySelector(`.modal`);
-const overlay = document.querySelector(`.modal__overlay`);
-const popupBtn = document.querySelector(`.modal__button`);
+const modalTrigger = document.querySelectorAll('[data-modal]'),
+  popup = document.querySelector('.modal'),
+  popupBtn = popup.querySelector('[data-close]');
 
-const openPopup = function () {
-  popup.classList.add(`modal--opened`);
-};
-
-const closePopup = function () {
-  popup.classList.remove(`modal--opened`);
-};
-
-function orderHandler() {
-  openPopup();
-
-  overlay.addEventListener(`click`, closePopup);
-
-  window.addEventListener(`keydown`, function (evt) {
-    if (evt.keyCode === 27) {
-      if (popup.classList.contains(`modal--opened`)) {
-        closePopup();
-      }
-    }
+modalTrigger.forEach(btn => {
+  btn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    popup.classList.toggle("modal--opened");
+    document.body.style.overflow = 'hidden';
   });
+});
+
+function closeModal() {
+  popup.classList.remove('modal--opened');
+  document.body.style.overflow = '';
 }
 
-if (btnOrder) {
-  btnOrder.addEventListener(`click`, orderHandler);
-} else {
-  for (let i = 0; i < btnOrders.length; i++) {
-    btnOrders[i].addEventListener(`click`, orderHandler);
-  }
-}
-
-popupBtn.addEventListener(`click`, function (evt) {
+popupBtn.addEventListener('click', (evt) => {
   evt.preventDefault();
-  closePopup();
+  closeModal();
+});
+
+popup.addEventListener('click', (evt) => {
+  if (evt.target === popup) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.code === 'Escape' && popup.classList.contains('modal--opened')) {
+    closeModal();
+  }
 });
 
 //Слайдер
@@ -86,7 +79,7 @@ const nextSlide = () => {
 
 const prevSlide = () => {
   if (index == 0) {
-  index = slides.length - 1;
+    index = slides.length - 1;
     activeSlide(index);
   } else {
     index--;
