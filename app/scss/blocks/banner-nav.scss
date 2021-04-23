@@ -12,6 +12,7 @@
   position: relative;
   display: block;
   padding: 28px 30px;
+  transition: $transition;
 
   &::before {
     content: "";

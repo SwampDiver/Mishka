@@ -2,6 +2,7 @@
   position: relative;
   margin-bottom: 57px;
   border: 1px solid $grey-light;
+  transition: $transition;
 
   &:hover {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
@@ -67,6 +68,7 @@
   background-repeat: no-repeat;
   background-color: transparent;
   transform: translate(-50%, -50%);
+  transition: $transition;
   cursor: pointer;
 
   &:hover {

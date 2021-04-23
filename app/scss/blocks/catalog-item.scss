@@ -17,6 +17,7 @@
 .catalog-item__wrapper {
   border: 1px solid $grey-light;
   padding: 0 27px 30px;
+  transition: $transition;
 }
 
 .catalog-item__title {
@@ -27,6 +28,8 @@
 }
 
 .catalog-item__link {
+  transition: $transition;
+
   &:hover,
   &:focus {
     opacity: 60%;
@@ -60,6 +63,7 @@
   width: 20px;
   height: 20px;
   background-color: transparent;
+  transition: $transition;
 
   &:hover .catalog-item__icon,
   &:focus .catalog-item__icon {

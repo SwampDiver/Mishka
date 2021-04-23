@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: $transition;
 
   &:hover .page-footer__developed-by-icon {
     fill: $aqua-dark--hover;
@@ -54,6 +55,7 @@
   .page-footer__link-logo {
     display: block;
     margin-right: 87px;
+    transition: $transition;
 
     &:hover .page-footer__icon-logo {
       fill: $aqua-light;

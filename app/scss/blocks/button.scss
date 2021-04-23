@@ -13,6 +13,7 @@
   text-transform: uppercase;
   color: $grey-dark;
   background-color: transparent;
+  transition: $transition;
 
   &:hover,
   &:focus {
