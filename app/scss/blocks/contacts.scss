@@ -45,6 +45,7 @@
 .contacts__email {
   border-bottom: 1px solid $aqua-form;
   padding-bottom: 4px;
+  transition: $transition;
 
   &:hover,
   &:focus {
